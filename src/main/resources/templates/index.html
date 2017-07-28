@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"/>
 <head>
     <meta charset="UTF-8"/>
     <title>Portfolio home</title>
     <!--<link rel="stylesheet" href="../static/styles.css">-->
 </head>
+<div class="container">
 <body>
 <header>
     <!--name and title on left side of screen, title will be smaller font-->
@@ -13,7 +14,7 @@
     <!--list of links to be horizontal, remove list decoration, anchor tags to project page or section of home page-->
     <ul>
         <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="/projects">Projects</a></li>
         <li><a href="#">Contact Me</a></li>
     </ul>
 
@@ -23,9 +24,10 @@
 
 
 <p>Iron Yard graduate with a focus in Java (Spring). Also have experience with Postgres, SQL, SQLite, Mongo, Node,
-    JavaScript, and PHP. Check out the projects section for samples of my work.
+    ane JavaScript. Check out the <a href="/projects">projects</a> page for samples of my work.
 </p>
 
 
 </body>
+</div>
 </html>
