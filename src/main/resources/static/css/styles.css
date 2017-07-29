@@ -1,0 +1,110 @@
+body{
+    background-image: url("../img/green-scoll-two-corners.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.navbar{
+    height: 80px;
+    width: 100%;
+    background-color: darkolivegreen ;
+}
+
+.name{
+    font-family: 'Courgette', cursive;
+    font-size: 50px;
+    font-weight: 300;
+    color: snow;
+    margin-left: 45px;
+    float: left;
+}
+.title{
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: snow;
+    margin-left: 45px;
+}
+.links{
+    float: right;
+    list-style: none;
+    margin-right: 45px;
+}
+
+li{
+    display: inline-block;
+}
+
+.toplink a{
+    text-decoration: none;
+    color: snow;
+}
+
+.flex-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+
+#myPic{
+    height: 400px;
+    width: 350px;
+    border: 1px dimgray solid;
+    border-radius: 50%;
+}
+.thumbnail{
+    height: 222px;
+    width: 400px;
+}
+
+.github{
+    background-image: url("../img/github_replica.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.myst_word{
+    background-image: url("../img/mystery_word.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.gabble{
+    background-image: url("../img/gabble.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.code_snip{
+    background-image: url("../img/code_snippet.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+footer{
+    text-align: center;
+}
+
+.super{
+    vertical-align: super;
+}
+
+.copyright{
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    font-weight: 300;
+}
+/*
+fonts:
+font-family: 'Merriweather', serif;
+font-family: 'Courgette', cursive;
+*/
