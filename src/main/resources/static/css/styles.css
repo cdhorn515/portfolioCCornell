@@ -2,8 +2,6 @@ body{
     background-image: url("../img/green-scoll-two-corners.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-
-
 }
 
 .navbar{
@@ -73,36 +71,44 @@ li{
 .thumbnail{
     height: 208px;
     width: 360px;
-}
-
-.github{
-    background-image: url("../img/github_replica.png");
     background-size: cover;
     background-repeat: no-repeat;
+}
 
+.technologies{
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
+
+.description{
+    text-align: justify;
+    font-family: 'Merriweather', serif;
+    font-size: 13px;
+}
+
+.completed{
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Merriweather', serif;
+}
+.github{
+    background-image: url("../img/github_replica.png");
 }
 
 .myst_word{
     background-image: url("../img/mystery_word.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-
 }
 
 .gabble{
     background-image: url("../img/gabble.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-
 }
 
 .code_snip{
     background-image: url("../img/code_snippet.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-
 }
-
+/*---------------------------------------------*/
 footer{
     text-align: center;
 }
