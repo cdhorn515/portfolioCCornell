@@ -57,9 +57,22 @@ li{
     border: 1px dimgray solid;
     border-radius: 50%;
 }
+/*------------------------PROJECTS PAGE----------*/
+
+.thumbnail-box{
+    margin-top: 220px;
+    background-color: transparent;
+    margin-bottom: 220px;
+}
+.thumbnail-title{
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    text-align: center;
+
+}
 .thumbnail{
-    height: 222px;
-    width: 400px;
+    height: 208px;
+    width: 360px;
 }
 
 .github{
