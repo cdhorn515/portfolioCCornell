@@ -5,6 +5,7 @@
 body{
     margin: 0;
     padding: 0;
+    height: 100vh;
     background-color: #C2E2D7;
     background-image: url("../img/Best-Web-Design-Tools-2016-shutterstock_265645031-Max-Griboedov.png");
     background-size: contain;
@@ -16,7 +17,10 @@ body{
     position: fixed;
     height: 80px;
     width: 100%;
-    background-color: azure;
+    background-color: darkslategrey;
+    /*background-color: #EBEBE6;*/
+    /*background-color: #e7ddbe;*/
+    z-index: 4;
 }
 
 .nav-align{
@@ -47,12 +51,14 @@ body{
 .toplink{
     display: inline-block;
     margin-right: 20px;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'Merriweather';
 }
 
 .toplink a{
     text-decoration: none;
-    color: #1E1E1E;
+    /*color: #1E1E1E;*/
+    color: silver;
 }
 
 span{
@@ -65,8 +71,16 @@ span{
     height: 50px;
 }
 /*-----------------------ABOUT PAGE--------------*/
+.home-section{
+    margin-bottom: 40px;
+}
+
 .container{
     padding-bottom: 50px;
+}
+
+.home-container{
+    padding-top: 50px;
 }
 
 .welcome{
@@ -90,7 +104,7 @@ span{
     font-family: 'Merriweather', serif;
     font-size: 16px;
     font-weight: lighter;
-    margin-top: 190px;
+    margin-top: 150px;
     background-color: rgba(247, 247, 247, 0.9);
 }
 
@@ -113,34 +127,53 @@ p{
 .project-link{
     color: #D25946;
 }
+
+.opacity{
+    background-color: rgba(194,226,215, 0.6);
+}
 /*------------------------PROJECTS PAGE----------*/
+.project-container{
+    padding-bottom: 20px;
+}
+
 .projects{
     text-align: center;
-    margin-top: 28px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.row{
+    padding: 10px;
+    background-color: rgba(247, 247, 247, 0.9);
 }
 
 .border-row-bottom{
     width: 100%;
-    height: 16px;
+    height: 10px;
     margin-top: 20px;
     background-color: #D25946;
 }
 
-.thumbnail-box{
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
+/*.thumbnail-box{*/
+    /*margin-top: 50px;*/
+    /*margin-bottom: 50px;*/
+/*}*/
 .thumbnail-title{
     font-family: 'Merriweather', serif;
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .thumbnail{
-    height: 208px;
-    width: 360px;
+    height: 200px;
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.thumbnail-txt{
+    /*background-color: rgba(247, 247, 247, 1.5);*/
+    text-align: center;
 }
 
 .technologies{
@@ -153,31 +186,22 @@ p{
 
 .description{
     text-align: justify;
-    font-family: 'Merriweather', serif;
-    font-size: 13px;
+    font-family: sans-serif;
+    font-size: 16px;
 }
 
 .completed{
-    text-align: center;
-    font-size: 14px;
-    font-family: 'Merriweather', serif;
-}
-.github{
-    background-image: url("../img/github_replica.png");
+    text-align: left;
+    font-size: 16px;
+    font-family: sans-serif;
+    margin-top: -5px;
 }
 
-.myst_word{
-    background-image: url("../img/mystery_word.png");
-}
-
-.gabble{
-    background-image: url("../img/gabble.png");
-}
-
-.code_snip{
-    background-image: url("../img/code_snippet.png");
-}
 /*--------------------CONTACT------------------------*/
+.contact-container{
+    background-color: rgba(194,226,215, 0.6);
+}
+
 .contact-pg{
     margin-bottom: 40px;
 }
@@ -186,7 +210,7 @@ p{
     font-family: 'Merriweather', serif;
     font-size: 24px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 112px;
     margin-bottom: 20px;
 }
 
@@ -203,13 +227,11 @@ p{
 label{
     margin-top: 10px;
 }
-
-
 /*----------------FOOTER-----------------------------*/
-
-
 footer{
-    margin-left: 50px;
+    /*border-top: solid 2px #D25946;*/
+    /*background-color: #e7ddbe;*/
+    height: 85px;
 }
 
 .footer_icons{

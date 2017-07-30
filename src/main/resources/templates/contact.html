@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Contact Me</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
@@ -13,8 +14,8 @@
 <header class="navbar">
     <div class="nav-align">
         <!--name and title on left side of screen, title will be smaller font-->
-        <span class="name">Christina Cornell</span><span class="title">Software Developer</span>
-
+        <span class="name">Christina Cornell</span>
+        <!--<span class="title">Software Developer</span>-->
         <!--list of links to be horizontal, remove list decoration, anchor tags to project page or section of home page-->
         <ul class="links">
             <li class="toplink"><a href="/">About</a></li>
@@ -24,9 +25,10 @@
     </div>
 </header>
 
-<section class="contact-pg">
+<section class="contact-pg opacity">
+    <div class="container contact-container">
 
-    <h3 class="contact">I'd love to talk with you about your needs for a software developer. You can contact me via email, or send a message using the form below and I'll get back to you soon.</h3>
+    <h3 class="contact">Use the links at the bottom of the page or the form below to contact me!</h3>
 <div class="contact-form">
     <form action="/contact">
         <div>
@@ -55,16 +57,17 @@
 
     </form>
 </div>
-
+    </div>
 </section>
 <div class="border-row-bottom"></div>
 <footer class="footer">
-    <i class="fa fa-copyright super social" aria-hidden="true"></i><span class="copyright">2017 Christina Cornell</span>
-    <a href="https://github.com/cdhorn515"><i class="fa fa-github fa-lg social" aria-hidden="true"></i></a>
-    <a href="https://www.linkedin.com/in/christinadcornell/"><i class="fa fa-linkedin-square fa-lg social" aria-hidden="true"></i></a>
-    <a href="https://twitter.com/cdhorn515"><i class="fa fa-twitter fa-lg social" aria-hidden="true"></i></a>
-    <i class="fa fa-envelope fa-lg social" aria-hidden="true"></i>
-
+    <div class="footer_icons">
+        <i class="fa fa-copyright super social" aria-hidden="true"></i><span class="copyright">2017 Christina Cornell</span>
+        <a href="https://github.com/cdhorn515"><i class="fa fa-github fa-lg social" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/christinadcornell/"><i class="fa fa-linkedin-square fa-lg social" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/cdhorn515"><i class="fa fa-twitter fa-lg social" aria-hidden="true"></i></a>
+        <a href="mailto:cdhorn515@gmail.com"><i class="fa fa-envelope fa-lg social" aria-hidden="true"></i></a>
+    </div>
 </footer>
 
 </body>

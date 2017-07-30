@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Featured Projects</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css"/>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
@@ -14,10 +16,7 @@
 
 <header class="navbar">
     <div class="nav-align">
-        <!--name and title on left side of screen, title will be smaller font-->
-        <span class="name">Christina Cornell</span><span class="title">Software Developer</span>
-
-        <!--list of links to be horizontal, remove list decoration, anchor tags to project page or section of home page-->
+        <span class="name">Christina Cornell</span>
         <ul class="links">
             <li class="toplink"><a href="/">About</a></li>
             <li class="toplink"><a href="/projects">Projects</a></li>
@@ -25,54 +24,64 @@
         </ul>
     </div>
 </header>
+<section class="opacity">
+
+<div class="container project-container">
 
 <h2 class="projects">Click on the links below to view samples of my web applications:</h2>
 <!--<div class="border-row-top"></div>-->
-<div class="thumbnail-box">
-    <div class="container">
+<!--<div class="thumbnail-box">-->
         <div class="row">
 
             <div class="col-md-4">
-                <div class="thumbnail-title">Mystery Word Game</div>
+                <div class="thumbnail-title"><a href="https://thawing-thicket-28274.herokuapp.com/">Mystery Word Game</a></div>
 
-                <img class="myst_word thumbnail" src="" alt=""/>
+                <img class="myst_word thumbnail" src="../img/mystery_word.png" alt=""/>
+                <div class="thumbnail-txt">
                 <div class="technologies">Node JS, express, sessions</div>
+
                 <p class="description">A hangman style game. Sessions used to store information, authentication used to
                     check for duplicate letter guesses, non-character guesses, and more than one letter guessed at a
-                    time. Completed Summer 2017</p>
+                    time.</p><p class="completed">Completed Summer 2017</p>
+                </div>
             </div>
 
             <div class="col-md-4">
-                <div class="thumbnail-title">Gabble Chat</div>
+                <div class="thumbnail-title"><a href="#">Gabble Chat</a></div>
                 <img class="gabble thumbnail" src="/img/gabble.png" alt=""/>
+                <div class="thumbnail-txt">
                 <div class="technologies">Node JS, Sequelize, express, sessions</div>
                 <p class="description">Twitter-like express application. Users information and "gabs" are stored on
                     separate tables on a Sequelize database and cross-referenced by use of foreign keys. Likes are
                     stored on a through table. User can create a login, save a gab of up to 140 characters, and like
-                    gabs, as well as see a list of who has liked a gab. User can also delete their own gab. Completed
-                    Summer 2017</p>
+                    gabs, as well as see a list of who has liked a gab. User can also delete their own gab.</p>
+                    <p class="completed">Completed Summer 2017</p>
+                </div>
             </div>
 
             <div class="col-md-4">
-                <div class="thumbnail-title">Code Snippet</div>
+                <div class="thumbnail-title"><a href="https://gentle-sea-40488.herokuapp.com/">Code Snippet</a></div>
                 <img class="code_snip thumbnail" src="/img/code_snippet.png" alt=""/>
+                <div class="thumbnail-txt">
                 <div class="technologies">Node JS, MongoDB, crypto, sessions</div>
                 <p class="description">Express application to store user-created objects of code on Mongo db. Encrypted
                     hash stored in database instead of user password. User can save created code snippets to database
-                    and search by language or tags for snippets they created. Completed Summer 2017</p>
+                    and search by language or tags for snippets they created.</p><p class="completed">Completed Summer 2017</p>
             </div>
-
+            </div>
         </div>
     </div>
-</div>
+</section>
 <div class="border-row-bottom"></div>
 
 <footer class="footer">
-    <i class="fa fa-copyright super social" aria-hidden="true"></i><span class="copyright">2017 Christina Cornell</span>
-    <a href="https://github.com/cdhorn515"><i class="fa fa-github fa-lg social" aria-hidden="true"></i></a>
-    <a href="https://www.linkedin.com/in/christinadcornell/"><i class="fa fa-linkedin-square fa-lg social"></i></a>
-    <a href="https://twitter.com/cdhorn515"><i class="fa fa-twitter fa-lg social" aria-hidden="true"></i></a>
-    <i class="fa fa-envelope fa-lg social" aria-hidden="true"></i>
+    <div class="footer_icons">
+        <i class="fa fa-copyright super social" aria-hidden="true"></i><span class="copyright">2017 Christina Cornell</span>
+        <a href="https://github.com/cdhorn515"><i class="fa fa-github fa-lg social" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/christinadcornell/"><i class="fa fa-linkedin-square fa-lg social" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/cdhorn515"><i class="fa fa-twitter fa-lg social" aria-hidden="true"></i></a>
+        <a href="mailto:cdhorn515@gmail.com"><i class="fa fa-envelope fa-lg social" aria-hidden="true"></i></a>
+    </div>
 </footer>
 </body>
 </html>
