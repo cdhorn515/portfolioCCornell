@@ -1,14 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
-    background-image: url("../img/pale-grn-flowers-lower-left.jpeg");
-    /*background-color: olivedrab;*/
-    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-color: #C2E2D7;
+    background-image: url("../img/Best-Web-Design-Tools-2016-shutterstock_265645031-Max-Griboedov.png");
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .navbar{
+    position: fixed;
     height: 80px;
     width: 100%;
-    background-color: darkolivegreen ;
+    background-color: azure;
 }
 
 .nav-align{
@@ -19,7 +27,7 @@ body{
     font-family: 'Courgette', cursive;
     font-size: 50px;
     font-weight: 300;
-    color: snow;
+    color: #D25946;
     margin-left: 45px;
     float: left;
 }
@@ -27,7 +35,7 @@ body{
     font-family: sans-serif;
     font-size: 28px;
     font-weight: 300;
-    color: snow;
+    color: #1E1E1E;
     margin-left: 45px;
 }
 .links{
@@ -44,15 +52,21 @@ body{
 
 .toplink a{
     text-decoration: none;
-    color: snow;
+    color: #1E1E1E;
 }
 
 span{
     display: inline-block;
 }
+
+#treePic{
+    text-align: center;
+    width: 50px;
+    height: 50px;
+}
 /*-----------------------ABOUT PAGE--------------*/
 .container{
-    margin-bottom: 140px;
+    padding-bottom: 50px;
 }
 
 .welcome{
@@ -60,25 +74,24 @@ span{
 }
 
 #myPic{
-    height: 350px;
-    width: 300px;
+    height: 330px;
+    width: 285px;
     border: 1px dimgray solid;
     border-radius: 30%;
     float: right;
-    margin-right: 100px;
-    margin-top: 70px;
+    margin-right: 10px;
+    margin-top: 240px;
 }
 
 .aboutMe {
     width: 45%;
     float: left;
-    /*margin-right: 20px;*/
+    padding: 20px;
     font-family: 'Merriweather', serif;
     font-size: 16px;
     font-weight: lighter;
-    margin-top: 60px;
-    margin-left: 70px;
-    margin-bottom: 60px;
+    margin-top: 190px;
+    background-color: rgba(247, 247, 247, 0.9);
 }
 
 .about-me-title{
@@ -91,9 +104,14 @@ span{
     margin-bottom: 20px;
     font-size: 36px;
 }
+p{
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
 
 .project-link{
-    color: #556B2F;
+    color: #D25946;
 }
 /*------------------------PROJECTS PAGE----------*/
 .projects{
@@ -101,26 +119,11 @@ span{
     margin-top: 28px;
 }
 
-.border-row-top, .border-row-bottom{
-    width: 100%;
-    height: 25px;
-    background-color: #556B2F;
-}
-
-.border-row-top{
-    margin-top: 28px;
-    /*width: 100%;*/
-    /*height: 25px;*/
-    /*background-color: dimgrey;*/
-
-}
-
 .border-row-bottom{
+    width: 100%;
+    height: 16px;
     margin-top: 20px;
-    /*width: 100%;*/
-    /*height: 25px;*/
-    /*background-color: dimgrey;*/
-
+    background-color: #D25946;
 }
 
 .thumbnail-box{
@@ -207,6 +210,10 @@ label{
 
 footer{
     margin-left: 50px;
+}
+
+.footer_icons{
+
 }
 
 .super{
