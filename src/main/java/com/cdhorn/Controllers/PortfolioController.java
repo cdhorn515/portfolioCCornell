@@ -29,9 +29,10 @@ public class PortfolioController {
                                 @RequestParam("image") String image,
                                 @RequestParam("technologies") String technologies,
                                 @RequestParam("description") String description,
-                                @RequestParam("completed") String completed) {
+                                @RequestParam("completed") String completed,
+                                @RequestParam("url") String url) {
 
-        repo.add(title, image, technologies, description, completed);
+        repo.add(title, image, technologies, description, completed, url);
         return "redirect:/admin";
     }
 

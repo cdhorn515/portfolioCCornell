@@ -23,8 +23,8 @@ public class ProjectRepositoryImpl implements ProjectRepository{
     }
 
     @Override
-    public void add(String title, String image, String technologies, String description, String completed) {
-        jdbcTemplate.update("INSERT INTO project (title, image, technologies, description, completed) VALUES (?, ?, ?, ?, ?)", title, image, technologies, description, completed);
+    public void add(String title, String image, String technologies, String description, String completed, String url) {
+        jdbcTemplate.update("INSERT INTO project (title, image, technologies, description, completed, url) VALUES (?, ?, ?, ?, ?, ?)", title, image, technologies, description, completed, url);
     }
 
     @Override
@@ -40,7 +40,8 @@ public class ProjectRepositoryImpl implements ProjectRepository{
                     resultSet.getString("image"),
                     resultSet.getString("technologies"),
                     resultSet.getString("description"),
-                    resultSet.getString("completed"));
+                    resultSet.getString("completed"),
+                    resultSet.getString("url"));
             return project;
         }
     }

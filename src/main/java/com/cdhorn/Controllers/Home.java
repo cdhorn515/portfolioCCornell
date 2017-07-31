@@ -11,9 +11,6 @@ public class Home {
     @RequestMapping("/")
     public String index(ModelMap model) {
 
-
-
-
         return "index";
 
     }

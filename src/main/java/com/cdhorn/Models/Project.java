@@ -9,14 +9,16 @@ public class Project {
     private String technologies;
     private String description;
     private String completed;
+    private String url;
 
-    public Project(long id, String image, String title, String technologies, String description, String completed) {
+    public Project(long id, String title, String image, String technologies, String description, String completed, String url) {
         this.id = id;
         this.image = image;
         this.title = title;
         this.technologies = technologies;
         this.description = description;
         this.completed = completed;
+        this.url = url;
     }
 
     public long getId() {
@@ -65,5 +67,13 @@ public class Project {
 
     public void setCompleted(String completed) {
         this.completed = completed;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

@@ -13,6 +13,7 @@
     <input type="text" name="technologies"/>
     <input type="text" name="description"/>
     <input type="text" name="completed"/>
+    <input type="text" name="url"/>
     <input type="submit" value="Add"/>
 </form>
 
@@ -27,6 +28,8 @@
         <span th:text="${project.description}"></span>
         :
         <span th:text="${project.completed}"></span>
+        :
+        <span th:text="${project.url}"></span>
         <form action="/deleteProject" method="post">
             <input type="hidden" th:value="${project.id}" name="id"/>
             <input type="submit" value="Delete"/>
