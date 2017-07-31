@@ -29,49 +29,23 @@
 <div class="container project-container">
 
 <h2 class="projects">Click on the links below to view samples of my web applications:</h2>
-<!--<div class="border-row-top"></div>-->
-<!--<div class="thumbnail-box">-->
+
         <div class="row">
 
-            <div class="col-md-4">
-                <div class="thumbnail-title"><a href="https://thawing-thicket-28274.herokuapp.com/">Mystery Word Game</a></div>
+            <div th:each="allProjects : ${projects}" class="col-md-4">
+                <div class="thumbnail-title"><a th:href="${allProjects.url}" th:text="${allProjects.title}"></a></div>
 
-                <img class="myst_word thumbnail" src="/img/mystery_word.png" alt=""/>
+                <img class="thumbnail" th:src="${allProjects.image}" alt=""/>
                 <div class="thumbnail-txt">
-                <div class="technologies">Node JS, express, sessions</div>
+                    <div class="technologies" th:text="${allProjects.technologies}"></div>
 
-                <p class="description">A hangman style game. Sessions used to store information, authentication used to
-                    check for duplicate letter guesses, non-character guesses, and more than one letter guessed at a
-                    time.</p><p class="completed">Completed Summer 2017</p>
+                    <p class="description" th:text="${allProjects.description}"></p>
+                    <p class="completed" th:text="${allProjects.completed}"></p>
                 </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="thumbnail-title"><a href="#">Gabble Chat</a></div>
-                <img class="gabble thumbnail" src="/img/gabble.png" alt=""/>
-                <div class="thumbnail-txt">
-                <div class="technologies">Node JS, Sequelize, express, sessions</div>
-                <p class="description">Twitter-like express application. Users information and "gabs" are stored on
-                    separate tables on a Sequelize database and cross-referenced by use of foreign keys. Likes are
-                    stored on a through table. User can create a login, save a gab of up to 140 characters, and like
-                    gabs, as well as see a list of who has liked a gab. User can also delete their own gab.</p>
-                    <p class="completed">Completed Summer 2017</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="thumbnail-title"><a href="https://gentle-sea-40488.herokuapp.com/">Code Snippet</a></div>
-                <img class="code_snip thumbnail" src="/img/code_snippet.png" alt=""/>
-                <div class="thumbnail-txt">
-                <div class="technologies">Node JS, MongoDB, crypto, sessions</div>
-                <p class="description">Express application to store user-created objects of code on Mongo db. Encrypted
-                    hash stored in database instead of user password. User can save created code snippets to database
-                    and search by language or tags for snippets they created.</p><p class="completed">Completed Summer 2017</p>
-            </div>
             </div>
         </div>
-    </div>
 
+        </div>
 </section>
 <div class="border-row-bottom"></div>
 
@@ -87,3 +61,41 @@
 </footer>
 </body>
 </html>
+<!--
+            <div class="col-md-4">
+                <div class="thumbnail-title"><a href="https://thawing-thicket-28274.herokuapp.com/">Mystery Word Game</a></div>
+
+                <img class="thumbnail" src="/img/mystery_word.png" alt=""/>
+                <div class="thumbnail-txt">
+                <div class="technologies">Node JS, express, sessions</div>
+
+                <p class="description">A hangman style game. Sessions used to store information, authentication used to
+                    check for duplicate letter guesses, non-character guesses, and more than one letter guessed at a
+                    time.</p><p class="completed">Completed Summer 2017</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="thumbnail-title"><a href="#">Gabble Chat</a></div>
+                <img class="thumbnail" src="/img/gabble.png" alt=""/>
+                <div class="thumbnail-txt">
+                <div class="technologies">Node JS, Sequelize, express, sessions</div>
+                <p class="description">Twitter-like express application. Users information and "gabs" are stored on
+                    separate tables on a Sequelize database and cross-referenced by use of foreign keys. Likes are
+                    stored on a through table. User can create a login, save a gab of up to 140 characters, and like
+                    gabs, as well as see a list of who has liked a gab. User can also delete their own gab.</p>
+                    <p class="completed">Completed Summer 2017</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="thumbnail-title"><a href="https://gentle-sea-40488.herokuapp.com/">Code Snippet</a></div>
+                <img class="thumbnail" src="/img/code_snippet.png" alt=""/>
+                <div class="thumbnail-txt">
+                <div class="technologies">Node JS, MongoDB, crypto, sessions</div>
+                <p class="description">Express application to store user-created objects of code on Mongo db. Encrypted
+                    hash stored in database instead of user password. User can save created code snippets to database
+                    and search by language or tags for snippets they created.</p><p class="completed">Completed Summer 2017</p>
+            </div>
+            </div>
+            -->
