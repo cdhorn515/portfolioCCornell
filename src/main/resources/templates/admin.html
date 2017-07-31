@@ -7,5 +7,34 @@
 <body>
 <h1>Add new projects to the database:</h1>
 
+<form action="/createProject" method="post">
+    <input type="text" name="title" required="required"/>
+    <input type="text" name="image"/>
+    <input type="text" name="technologies"/>
+    <input type="text" name="description"/>
+    <input type="text" name="completed"/>
+    <input type="submit" value="Add"/>
+</form>
+
+<ul>
+    <li th:each="project : ${projects}">
+        <span th:text="${project.title}"></span>
+        :
+        <span th:text="${project.image}"></span>
+        :
+        <span th:text="${project.technologies}"></span>
+        :
+        <span th:text="${project.description}"></span>
+        :
+        <span th:text="${project.completed}"></span>
+        <form action="/deleteProject" method="post">
+            <input type="hidden" th:value="${project.id}" name="id"/>
+            <input type="submit" value="Delete"/>
+        </form>
+
+    </li>
+</ul>
+
+
 </body>
 </html>
