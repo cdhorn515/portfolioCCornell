@@ -1,29 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <title>Contact Me</title>
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-    <link href="https://fonts.googleapis.com/css?family=Courgette|Merriweather:700" rel="stylesheet"/>
-    <link rel="stylesheet" href="/css/styles.css"/>
+    <span th:include="includes :: css"></span>
+
 </head>
 <body>
-<header class="navbar">
-    <div class="nav-align">
-        <!--name and title on left side of screen, title will be smaller font-->
-        <span class="name">Christina Cornell</span>
-        <!--<span class="title">Software Developer</span>-->
-        <!--list of links to be horizontal, remove list decoration, anchor tags to project page or section of home page-->
-        <ul class="links">
-            <li class="toplink"><a href="/">About</a></li>
-            <li class="toplink"><a href="/projects">Projects</a></li>
-            <li class="toplink"><a href="/contact">Contact Me</a></li>
-        </ul>
-    </div>
-</header>
+
+<div th:include="navbar :: navbar"></div>
 
 <section class="contact-pg opacity">
     <div class="container contact-container">
@@ -72,6 +57,7 @@
     </div>
 
 </footer>
+<span th:include="includes :: js"></span>
 
 </body>
 </html>

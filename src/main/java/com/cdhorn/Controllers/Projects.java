@@ -19,8 +19,6 @@ public class Projects {
     public String projects(Model model) {
         List<Project> allProjects = repo.findAll();
         model.addAttribute("projects", allProjects);
-
-
         return "projects";
     }
 

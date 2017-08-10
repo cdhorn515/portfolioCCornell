@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+
+    <span th:fragment="css">
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Courgette|Merriweather:700" rel="stylesheet"/>
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" href="/css/styles.css"/>
+    </span>
+</head>
+<body>
+
+<!--define xml fragments for css/html-->
+
+<span th:fragment="js">
+    <script type="application/javascript" th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
+<script type="application/javascript" th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+
+</span>
+
+</body>
+</html>

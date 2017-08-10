@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Portfolio home</title>
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css"/>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-    <link href="https://fonts.googleapis.com/css?family=Courgette|Merriweather:700" rel="stylesheet"/>
-    <link rel="stylesheet" href="/css/styles.css"/>
+    <span th:include="includes :: css"></span>
+
 </head>
 <body>
-<header class="navbar">
-    <div class="nav-align">
-        <!--name and title on left side of screen, title will be smaller font-->
-        <span class="name">Christina Cornell</span>
-        <!--<span class="title">Software Developer</span>-->
-        <!--list of links to be horizontal, remove list decoration, anchor tags to project page or section of home page-->
-        <ul class="links">
-            <li class="toplink"><a href="/">About</a></li>
-            <li class="toplink"><a href="/projects">Projects</a></li>
-            <li class="toplink"><a href="/contact">Contact Me</a></li>
-        </ul>
-    </div>
-</header>
+
+<div th:include="navbar :: navbar"></div>
+
+<!--<header class="navbar">-->
+    <!--<div class="nav-align">-->
+        <!--&lt;!&ndash;name and title on left side of screen, title will be smaller font&ndash;&gt;-->
+        <!--<span class="name">Christina Cornell</span>-->
+        <!--&lt;!&ndash;<span class="title">Software Developer</span>&ndash;&gt;-->
+        <!--&lt;!&ndash;list of links to be horizontal, remove list decoration, anchor tags to project page or section of home page&ndash;&gt;-->
+        <!--<ul class="links">-->
+            <!--<li class="toplink"><a href="/">About</a></li>-->
+            <!--<li class="toplink"><a href="/projects">Projects</a></li>-->
+            <!--<li class="toplink"><a href="/contact">Contact Me</a></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+<!--</header>-->
 <section class="home-section">
 <div class="container home-container">
 
@@ -56,6 +55,9 @@
     <a href="mailto:cdhorn515@gmail.com"><i class="fa fa-envelope fa-lg social" aria-hidden="true"></i></a>
     </div>
 </footer>
+
+<span th:include="includes :: js"></span>
+
 </body>
 
 </html>

@@ -3,32 +3,17 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Featured Projects</title>
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css"/>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-    <link href="https://fonts.googleapis.com/css?family=Courgette|Merriweather:700" rel="stylesheet"/>
-    <link rel="stylesheet" href="/css/styles.css"/>
-
+    <span th:include="includes :: css"></span>
 </head>
 <body>
 
-<header class="navbar">
-    <div class="nav-align">
-        <span class="name">Christina Cornell</span>
-        <ul class="links">
-            <li class="toplink"><a href="/">About</a></li>
-            <li class="toplink"><a href="/projects">Projects</a></li>
-            <li class="toplink"><a href="/contact">Contact Me</a></li>
-        </ul>
-    </div>
-</header>
+<div th:include="navbar :: navbar"></div>
+
 <section class="opacity">
 
-<div class="container project-container">
+    <div class="container project-container">
 
-<h2 class="projects">Click on the links below to view samples of my web applications:</h2>
+        <h2 class="projects">Click on the links below to view samples of my web applications:</h2>
 
         <div class="row">
 
@@ -38,27 +23,29 @@
                 <img class="thumbnail" th:src="${allProjects.image}" alt=""/>
                 <div class="thumbnail-txt">
                     <div class="technologies" th:text="${allProjects.technologies}"></div>
-
                     <p class="description" th:text="${allProjects.description}"></p>
                     <p class="completed" th:text="${allProjects.completed}"></p>
                 </div>
             </div>
         </div>
 
-        </div>
+    </div>
 </section>
 <div class="border-row-bottom"></div>
 
 <footer class="footer">
     <div class="footer_icons">
-        <i class="fa fa-copyright super social" aria-hidden="true"></i><span class="copyright">2017 Christina Cornell</span>
+        <i class="fa fa-copyright super social" aria-hidden="true"></i><span
+            class="copyright">2017 Christina Cornell</span>
         <a href="https://github.com/cdhorn515"><i class="fa fa-github fa-lg social" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/christinadcornell/"><i class="fa fa-linkedin-square fa-lg social" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/christinadcornell/"><i class="fa fa-linkedin-square fa-lg social"
+                                                                    aria-hidden="true"></i></a>
         <a href="https://twitter.com/cdhorn515"><i class="fa fa-twitter fa-lg social" aria-hidden="true"></i></a>
         <a href="mailto:cdhorn515@gmail.com"><i class="fa fa-envelope fa-lg social" aria-hidden="true"></i></a>
     </div>
-
 </footer>
+<span th:include="includes :: js"></span>
+
 </body>
 </html>
 <!--
