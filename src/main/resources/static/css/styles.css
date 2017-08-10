@@ -15,15 +15,15 @@ body{
 
 .navbar{
     position: fixed;
+    /*height: 6vw;*/
     height: 80px;
     width: 100%;
     background-color: darkslategrey;
-    /*background-color: #EBEBE6;*/
-    /*background-color: #e7ddbe;*/
     z-index: 4;
 }
 
 .nav-align{
+    /*line-height: 6vw;*/
     line-height: 80px;
 }
 
@@ -263,6 +263,16 @@ footer{
 .credit-contact{
     color: #A9C4BB;
 }
+
+@media (max-width: 500px) and (orientation: portrait) {
+    .name{
+        font-size: 36px;
+    }
+
+
+}
+
+
 /*
 fonts:
 font-family: 'Merriweather', serif;
