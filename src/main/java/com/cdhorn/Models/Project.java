@@ -1,8 +1,15 @@
 package com.cdhorn.Models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Project {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String image;
     private String title;
@@ -10,16 +17,8 @@ public class Project {
     private String description;
     private String completed;
     private String url;
-
-    public Project(long id, String title, String image, String technologies, String description, String completed, String url) {
-        this.id = id;
-        this.image = image;
-        this.title = title;
-        this.technologies = technologies;
-        this.description = description;
-        this.completed = completed;
-        this.url = url;
-    }
+    private String code;
+    private String walkthrough;
 
     public long getId() {
         return id;
@@ -75,5 +74,21 @@ public class Project {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getWalkthrough() {
+        return walkthrough;
+    }
+
+    public void setWalkthrough(String walkthrough) {
+        this.walkthrough = walkthrough;
     }
 }

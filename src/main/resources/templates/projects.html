@@ -19,7 +19,6 @@
 
             <div th:each="allProjects : ${projects}" class="col-md-4">
                 <div class="thumbnail-title"><a th:href="${allProjects.url}" th:text="${allProjects.title}"></a></div>
-
                 <img class="thumbnail" th:src="${allProjects.image}" alt=""/>
                 <div class="thumbnail-txt">
                     <div class="technologies" th:text="${allProjects.technologies}"></div>
@@ -28,10 +27,8 @@
                 </div>
             </div>
         </div>
-
     </div>
 </section>
-<!--<div class="border-row-bottom"></div>-->
 
 <div th:include="navbar :: footer"></div>
 

@@ -2,16 +2,8 @@ package com.cdhorn.Interfaces;
 
 
 import com.cdhorn.Models.Project;
+import org.springframework.data.repository.CrudRepository;
 
-import java.util.List;
-
-public interface ProjectRepository {
-
-    List<Project> findAll();
-
-    void add(String title, String image, String technologies, String description, String completed, String url);
-
-    void delete(long id);
-
+public interface ProjectRepository  extends CrudRepository<Project, Long> {
 
 }
