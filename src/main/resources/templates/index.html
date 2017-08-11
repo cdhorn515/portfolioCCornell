@@ -10,15 +10,15 @@
 <div th:include="navbar :: navbar"></div>
 
 <section class="home-section">
-<div class="container-fluid home-container">
+<div class="container home-container">
 
     <img id="myPic" src="/img/profilepic.jpeg" alt=""/>
 
 <div class="aboutMe">
     <h2 class="aboutMe-heading">About me</h2>
 
-    <h4 class="about-me-title">Jr Software Developer</h4>
-    <p>I'm an Iron Yard Web Development graduate and also a musician. My focus is in Java (Spring) and I also have experience with SQL, SQLite, Postgres, Mongo, Node, JavaScript, HTML, and CSS. I enjoy the challenge of debugging and testing code, creating databases, and organizing what I've written into clean, readable code that works in harmony with the design objectives.</p>
+    <h4 class="about-me-title">Software/Web Developer</h4>
+    <p>I'm an Iron Yard Web Development graduate and also a musician. My focus is in Java (Spring Boot) and I also have experience with SQL, SQLite, Postgres, Mongo, Node, JavaScript, HTML, and CSS. I enjoy the challenge of debugging and testing code, creating databases, and organizing what I've written into clean, readable code that works in harmony with the design objectives.</p>
 
     <p>Check out my <a href="/projects" class="project-link">projects</a> page for samples of my web applications.</p>
 </div>
@@ -27,17 +27,11 @@
     <div class="credit">image by Max Griboedov/shutterstock</div>
 
 </section>
-<div class="border-row-bottom"></div>
+<!--<div class="border-row-bottom"></div>-->
 
-<footer class="footer">
-    <div class="footer_icons">
-    <i class="fa fa-copyright super social" aria-hidden="true"></i><span class="copyright">2017 Christina Cornell</span>
-    <a href="https://github.com/cdhorn515"><i class="fa fa-github fa-lg social" aria-hidden="true"></i></a>
-    <a href="https://www.linkedin.com/in/christinadcornell/"><i class="fa fa-linkedin-square fa-lg social" aria-hidden="true"></i></a>
-    <a href="https://twitter.com/cdhorn515"><i class="fa fa-twitter fa-lg social" aria-hidden="true"></i></a>
-    <a href="mailto:cdhorn515@gmail.com"><i class="fa fa-envelope fa-lg social" aria-hidden="true"></i></a>
-    </div>
-</footer>
+
+
+<div th:include="navbar :: footer"></div>
 
 <span th:include="includes :: js"></span>
 
