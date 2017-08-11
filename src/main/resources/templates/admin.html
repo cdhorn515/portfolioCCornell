@@ -2,12 +2,19 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Admin page</title>
+    <title>Admin</title>
+    <!--<span th:include="includes :: css"></span>-->
 </head>
 <body>
+
+<div th:include="navbar :: navbar"></div>
+
 <h1>Add new projects to the database:</h1>
 
-<form action="/createProject" method="post">
+<form action="/admin/createProject" method="post">
+    <input type="hidden"
+           th:name="${_csrf.parameterName}"
+           th:value="${_csrf.token}"/>
     <input type="text" name="title" required="required" placeholder="title"/>
     <input type="text" name="image" placeholder="image"/>
     <input type="text" name="technologies" placeholder="technologies"/>
@@ -18,9 +25,10 @@
     <input type="text" name="walkthrough" placeholder="walkthrough"/>
     <input type="submit" value="Add"/>
 </form>
-
 <ul>
     <li th:each="project : ${projects}">
+        <form action="/admin/deleteProject" method="post">
+
         <span th:text="${project.title}"></span>
         :
         <span th:text="${project.image}"></span>
@@ -32,13 +40,22 @@
         <span th:text="${project.completed}"></span>
         :
         <span th:text="${project.url}"></span>
-        <!--<form action="/deleteProject" method="post">-->
-            <!--<input type="hidden" th:value="${project.inamename="id"/>-->
-            <!--<input type="submit" value="Delete"/>-->
-        <!--</form>-->
-
+        <input type="hidden"
+               th:name="${_csrf.parameterName}"
+               th:value="${_csrf.token}"/>
+        <input type="hidden" name="id" th:value="${project.id}"/>
+        <input type="submit" value="Delete"/>
+</form>
     </li>
 </ul>
+
+<form th:action="@{/logout}" method="post">
+    <input type="hidden"
+           th:name="${_csrf.parameterName}"
+           th:value="${_csrf.token}"/>
+    <input type="submit" value="Logout"/>
+</form>
+
 
 
 </body>
