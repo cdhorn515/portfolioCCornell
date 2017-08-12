@@ -5,7 +5,7 @@
 
 	<groupId>com.cdhorn</groupId>
 	<artifactId>portfolio</artifactId>
-	<version>0.0.2-PREDEPLOY</version>
+	<version>1.0.0-RELEASE</version>
 	<packaging>jar</packaging>
 
 	<name>portfolio</name>
