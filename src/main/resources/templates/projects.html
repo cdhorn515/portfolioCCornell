@@ -18,18 +18,22 @@
         <div class="row">
 
             <div th:each="allProjects : ${projects}" class="col-md-4 project-row">
-                <div class="thumbnail-title"><a target="_blank" th:href="${allProjects.url}" th:text="${allProjects.title}"></a></div>
-                <a target="_blank" th:href="${allProjects.url}" >
+                <div class="thumbnail-title"><a target="_blank" th:href="${allProjects.url}"
+                                                th:text="${allProjects.title}"></a></div>
+                <a target="_blank" th:href="${allProjects.url}">
                     <img class="thumbnail" th:src="${allProjects.image}" alt=""/>
                 </a>
                 <div class="thumbnail-txt">
                     <div class="technologies" th:text="${allProjects.technologies}"></div>
                     <div class="repo"><a target="_blank" th:href="${allProjects.code}">GitHub repo</a></div>
-                    <div class="repo"><a target="_blank" href="#">Demo</a></div>
+                    <div class="demo"><a target="_blank" href="#">Demo-Coming Soon!</a></div>
                     <div class="information">
-                        <!--<h4>Click for description</h4>-->
-                        <p class="description" th:text="${allProjects.description}"></p>
-                        <p class="completed" th:text="${allProjects.completed}"></p>
+                        <a th:href="'#' + ${allProjects.id}" class="btn btn-default" data-toggle="collapse">Click for
+                            description</a>
+                        <div th:id="${allProjects.id}" class="collapse">
+                            <p class="description" th:text="${allProjects.description}"></p>
+                            <p class="completed" th:text="${allProjects.completed}"></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -37,7 +41,6 @@
     </div>
 
 </section>
-<!--<div class="spaceBeforeFooter"></div>-->
 
 <div th:include="navbar :: project-footer"></div>
 
@@ -46,3 +49,22 @@
 </body>
 </html>
 
+<!--bootstrap accordian panel-->
+<!--<div class="panel-group" id="accordion">-->
+<!--<div class="panel panel-default">-->
+<!--<div class="panel-heading">-->
+<!--<h4 class="panel-title">-->
+<!--<a data-toggle="collapse" data-parent="#accordion"-->
+<!--th:href="'#' + ${allProjects.id}">-->
+<!--Click for description</a>-->
+<!--</h4>-->
+<!--</div>-->
+<!--<div th:id="${allProjects.id}" class="panel-collapse collapse">-->
+<!--<div class="panel-body">-->
+<!--<p class="description" th:text="${allProjects.description}"></p>-->
+<!--<p class="completed" th:text="${allProjects.completed}"></p>-->
+
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
