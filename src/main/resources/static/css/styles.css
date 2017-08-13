@@ -63,11 +63,6 @@ span{
     display: inline-block;
 }
 
-/*#treePic{*/
-    /*text-align: center;*/
-    /*width: 50px;*/
-    /*height: 50px;*/
-/*}*/
 /*-----------------------ABOUT PAGE--------------*/
 .home-section{
     margin-bottom: 40px;
@@ -177,8 +172,6 @@ p{
 }
 
 .information{
-    /*max-height: 50px;*/
-    /*overflow-y: scroll;*/
     z-index: 3;
     padding: 8px;
 }
@@ -237,7 +230,6 @@ label{
 footer{
     border-top: solid 2px #D25946!important;
     background-color: #C2E2D7!important;
-    /*height: 85px;*/
 }
 
 .footer_icons{
@@ -275,9 +267,7 @@ footer{
         font-size: 36px;
     }
 
-
 }
-
 
 /*
 fonts:
