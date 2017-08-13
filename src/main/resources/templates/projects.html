@@ -24,6 +24,8 @@
                 </a>
                 <div class="thumbnail-txt">
                     <div class="technologies" th:text="${allProjects.technologies}"></div>
+                    <div class="repo"><a target="_blank" th:href="${allProjects.code}">GitHub repo</a></div>
+                    <div class="repo"><a target="_blank" href="#">Demo</a></div>
                     <div class="information">
                         <!--<h4>Click for description</h4>-->
                         <p class="description" th:text="${allProjects.description}"></p>
@@ -33,9 +35,11 @@
             </div>
         </div>
     </div>
-</section>
 
-<div th:include="navbar :: footer"></div>
+</section>
+<!--<div class="spaceBeforeFooter"></div>-->
+
+<div th:include="navbar :: project-footer"></div>
 
 <span th:include="includes :: js"></span>
 

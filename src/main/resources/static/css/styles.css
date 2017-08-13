@@ -15,16 +15,14 @@ body{
 
 .navbar{
     position: fixed;
-    /*height: 6vw;*/
-    height: 80px;
+    height: 5.5vw;
     width: 100%;
     background-color: darkslategrey;
     z-index: 4;
 }
 
 .nav-align{
-    /*line-height: 6vw;*/
-    line-height: 80px;
+    line-height: 5.5vw;
 }
 
 .name{
@@ -58,7 +56,6 @@ body{
 
 .toplink a{
     text-decoration: none;
-    /*color: #1E1E1E;*/
     color: silver;
 }
 
@@ -146,6 +143,7 @@ p{
 .row{
     padding: 10px;
     background-color: rgba(247, 247, 247, 0.9);
+    margin-bottom: 20px;
 }
 
 .project-row{
@@ -153,16 +151,6 @@ p{
     padding-bottom: 10px;
 }
 
-/*.border-row-bottom{*/
-    /*width: 100%;*/
-    /*height: 10px;*/
-    /*background-color: #D25946;*/
-/*}*/
-
-/*.thumbnail-box{*/
-    /*margin-top: 50px;*/
-    /*margin-bottom: 50px;*/
-/*}*/
 .thumbnail-title{
     font-family: 'Merriweather', serif;
     font-size: 22px;
@@ -177,7 +165,6 @@ p{
 }
 
 .thumbnail-txt{
-    /*background-color: rgba(247, 247, 247, 1.5);*/
     text-align: center;
 }
 
@@ -205,6 +192,11 @@ p{
     font-size: 16px;
     font-family: sans-serif;
     margin-top: -5px;
+}
+
+.spaceBeforeFooter{
+    width: 100%;
+    height: 20px;
 }
 
 /*--------------------CONTACT------------------------*/
