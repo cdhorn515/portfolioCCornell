@@ -17,15 +17,15 @@
 
         <div class="row">
 
-            <div th:each="allProjects : ${projects}" class="col-md-4">
-                <div class="thumbnail-title"><a th:href="${allProjects.url}" th:text="${allProjects.title}"></a></div>
-                <a th:href="${allProjects.url}" >
+            <div th:each="allProjects : ${projects}" class="col-md-4 project-row">
+                <div class="thumbnail-title"><a target="_blank" th:href="${allProjects.url}" th:text="${allProjects.title}"></a></div>
+                <a target="_blank" th:href="${allProjects.url}" >
                     <img class="thumbnail" th:src="${allProjects.image}" alt=""/>
                 </a>
                 <div class="thumbnail-txt">
                     <div class="technologies" th:text="${allProjects.technologies}"></div>
-                    <div data-role="information">
-                        <h4>Click for description</h4>
+                    <div class="information">
+                        <!--<h4>Click for description</h4>-->
                         <p class="description" th:text="${allProjects.description}"></p>
                         <p class="completed" th:text="${allProjects.completed}"></p>
                     </div>
