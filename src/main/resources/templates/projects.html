@@ -16,7 +16,6 @@
         <h2 class="projects">Click on the links below to view samples of my web applications:</h2>
 
         <div class="row">
-
             <div th:each="allProjects : ${projects}" class="col-md-4 project-row">
                 <div class="thumbnail-title"><a target="_blank" th:href="${allProjects.url}"
                                                 th:text="${allProjects.title}"></a></div>
@@ -28,16 +27,37 @@
                     <div class="repo"><a target="_blank" th:href="${allProjects.code}">GitHub repo</a></div>
                     <div class="demo"><a target="_blank" href="#">Demo-Coming Soon!</a></div>
                     <div class="information">
-                        <a th:href="'#' + ${allProjects.id}" class="btn btn-default" data-toggle="collapse">Click for
-                            description</a>
-                        <div th:id="${allProjects.id}" class="collapse">
-                            <p class="description" th:text="${allProjects.description}"></p>
-                            <p class="completed" th:text="${allProjects.completed}"></p>
-                        </div>
+                        <!-- Button trigger modal -->
+                        <a th:href="'#' + ${allProjects.id}" type="button" class="btn btn-default btn-md" data-toggle="modal" data-th-target="${allProjects.id}">
+                            Click for description
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Modal -->
+        <div th:each="allProjects : ${projects}" class="modal fade" th:id="${allProjects.id}"
+             aria-labelledby="projectTitle" tabindex="-1" role="dialog">
+
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="projectTitle"
+                            th:text="${allProjects.title}"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="description" th:text="${allProjects.description}"></p>
+                        <p class="completed" th:text="${allProjects.completed}"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div> <!--end of Modal div-->
     </div>
 
 </section>
@@ -48,4 +68,7 @@
 
 </body>
 </html>
+
+
+
 
