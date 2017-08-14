@@ -10,26 +10,76 @@
 <div th:include="navbar :: navbar"></div>
 
 <section class="home-section">
-<div class="container home-container">
+    <div class="container home-container">
 
-    <img id="myPic" src="/img/profilepic.jpeg" alt=""/>
+        <img id="myPic" src="/img/profilepic.jpeg" alt=""/>
 
-<div class="aboutMe">
-    <h2 class="aboutMe-heading">About me</h2>
+        <div class="aboutMe">
 
-    <h4 class="about-me-title">Software/Web Developer</h4>
-    <p>I'm an Iron Yard Web Development graduate and a musician. My focus is in Java (Spring Boot) and I also have experience with SQL, SQLite, Postgres, Mongo, Node, JavaScript, HTML, and CSS. I enjoy the challenge of debugging and testing code, creating databases, and organizing what I've written into clean, readable code that works in harmony with the design objectives.</p>
+            <!--bootstrap accordian panel-->
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion"
+                               href="#aboutMe">
+                                Click to read about me...</a>
+                        </h4>
+                    </div>
+                    <div id="aboutMe" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <h4 class="about-me-title">Software/Web Developer</h4>
+                            <p>I'm an Iron Yard Web Development graduate and a french horn player. As a musician I use
+                                critical thinking to determine how to produce a beautiful sound on the horn. I'm excited
+                                to bring my problem solving skills to programming, and am open to relocation.</p>
 
-    <p>Check out my <a href="/projects" class="project-link">projects</a> page for samples of my web applications.</p>
-</div>
-</div>
+                            <p>In September 2016 I was accepted into a pilot 12-week program by SC Codes
+                                which focused on building front-end web applications and also gave me the opportunity
+                                to contribute to Code for Greenville's open source project. I enrolled in The
+                                Iron Yard's 12-week immersive coding bootcamp in May 2017 where I was able to dive
+                                deeper into front-end as well as learning back-end fundamentals.</p>
 
+                            <p>My interest in working with data and the server side led me to choose Java (Spring
+                                Boot) as my language focus. I also have experience with SQL, PostgreSQL, Mongo,
+                                Node.js, along with JavaScript, HTML, and CSS. I enjoy the challenge of debugging and
+                                testing, creating databases, and figuring out how to write code that meets the design
+                                objectives.</p>
+
+                            <p>Check out my <a href="/projects" class="project-link">projects</a> page for samples of my
+                                work. I look forward to talking with you about becoming a member of your
+                                team!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--<div class="information">-->
+            <!--<a href="#" class="btn btn-default" data-toggle="collapse">About me</a>-->
+            <!--<div id="" class="collapse">-->
+
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!--<h2 class="aboutMe-heading">About me</h2>-->
+
+            <!--<h4 class="about-me-title">Software/Web Developer</h4>-->
+            <!--<p>I'm an Iron Yard Web Development graduate and a musician. My focus is in Java (Spring Boot) and I also-->
+            <!--have experience with SQL, SQLite, Postgres, Mongo, Node, JavaScript, HTML, and CSS. I enjoy the-->
+            <!--challenge of debugging and testing code, creating databases, and organizing what I've written into-->
+            <!--clean, readable code that works in harmony with the design objectives.</p>-->
+
+            <!--<p>Check out my <a href="/projects" class="project-link">projects</a> page for samples of my web-->
+            <!--applications.</p>-->
+            <!--</div>-->
+            <!--</div>-->
+
+        </div>
+    </div>
     <div class="credit">image by Max Griboedov/shutterstock</div>
 
 </section>
-<!--<div class="border-row-bottom"></div>-->
-
-
 
 <div th:include="navbar :: footer"></div>
 

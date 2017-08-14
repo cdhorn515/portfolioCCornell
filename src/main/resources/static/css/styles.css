@@ -90,14 +90,18 @@ span{
     margin-top: 240px;
 }
 
-.aboutMe {
+.aboutMe{
+    position: relative;
     width: 45%;
+    max-height: 350px;
+    overflow-y: scroll;
     float: left;
     padding: 20px;
+    padding-bottom: 0;
     font-family: 'Merriweather', serif;
     font-size: 16px;
     font-weight: lighter;
-    margin-top: 150px;
+    margin-top: 145px;
     background-color: rgba(247, 247, 247, 0.9);
 }
 
@@ -111,6 +115,7 @@ span{
     margin-bottom: 20px;
     font-size: 36px;
 }
+
 p{
     font-family: sans-serif;
     font-size: 18px;
@@ -124,6 +129,7 @@ p{
 .opacity{
     background-color: rgba(194,226,215, 0.6);
 }
+
 /*------------------------PROJECTS PAGE----------*/
 .project-container{
     padding-bottom: 20px;
@@ -232,10 +238,6 @@ footer{
     background-color: #C2E2D7!important;
 }
 
-.footer_icons{
-
-}
-
 .super{
     margin-left: 50px;
     vertical-align: super;
@@ -255,6 +257,7 @@ footer{
 }
 
 .credit{
+    margin-top: 20px;
     text-align: center;
     font-size: 12px;
 }
