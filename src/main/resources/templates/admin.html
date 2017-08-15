@@ -12,7 +12,7 @@
 <div class="container admin-pg">
 
 <h1>Add new projects to the database:</h1>
-
+<div class="admin-form">
 <form action="/admin/createProject" method="post">
     <input type="hidden"
            th:name="${_csrf.parameterName}"
@@ -27,6 +27,7 @@
     <input type="text" name="walkthrough" placeholder="walkthrough"/>
     <input type="submit" value="Add"/>
 </form>
+</div>
 <ul>
     <li th:each="project : ${projects}">
         <form action="/admin/deleteProject" method="post">
@@ -58,10 +59,14 @@
     <input type="submit" value="Logout"/>
 </form>
 </div>
-<div th:include="navbar :: footer"></div>
+
+<div class="credit">image by Max Griboedov/shutterstock</div>
+
 
 <span th:include="includes :: js"></span>
 
 
 </body>
+<div th:include="navbar :: footer"></div>
+
 </html>

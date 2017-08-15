@@ -250,13 +250,13 @@ footer{
     color: #33442A;
 }
 
-.social{
+.social, .admin-link{
     margin: 20px 15px;
     margin-right: 0;
     color: #33442A;
 }
 
-.credit{
+.credit, admin-link{
     margin-top: 20px;
     text-align: center;
     font-size: 12px;
@@ -264,15 +264,30 @@ footer{
 .credit-contact{
     color: #A9C4BB;
 }
-
+.admin-link{
+    margin-right: 20px;
+    font-size: 16px;
+}
 /*--------------------------ADMIN----------------*/
 .admin-body{
     background-color: #C2E2D7;
 }
 
+.admin-form{
+    margin-bottom: 20px;
+}
+
+.admin-section{
+    height: 78vh;
+}
+
 .admin-pg{
     background-color: rgba(247, 247, 247, 0.9);
-    margin-top: 80px;
+    margin-top: 100px;
+}
+
+.admin-login{
+    margin-top: 70px;
 }
 
 @media (max-width: 500px) and (orientation: portrait) {
