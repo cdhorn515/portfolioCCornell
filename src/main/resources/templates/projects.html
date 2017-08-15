@@ -16,19 +16,19 @@
         <h2 class="projects">Click on the links below to view samples of my web applications:</h2>
 
         <div class="row">
-            <div th:each="allProjects : ${projects}" class="col-md-4 project-row">
-                <div class="thumbnail-title"><a target="_blank" th:href="${allProjects.url}"
-                                                th:text="${allProjects.title}"></a></div>
-                <a target="_blank" th:href="${allProjects.url}">
-                    <img class="thumbnail" th:src="${allProjects.image}" alt=""/>
+            <div th:each="project : ${projects}" class="col-md-4 project-row">
+                <div class="thumbnail-title"><a target="_blank" th:href="${project.url}"
+                                                th:text="${project.title}"></a></div>
+                <a target="_blank" th:href="${project.url}">
+                    <img class="thumbnail" th:src="${project.image}" alt=""/>
                 </a>
                 <div class="thumbnail-txt">
-                    <div class="technologies" th:text="${allProjects.technologies}"></div>
-                    <div class="repo"><a target="_blank" th:href="${allProjects.code}">GitHub repo</a></div>
+                    <div class="technologies" th:text="${project.technologies}"></div>
+                    <div class="repo"><a target="_blank" th:href="${project.code}">GitHub repo</a></div>
                     <div class="demo"><a target="_blank" href="#">Demo-Coming Soon!</a></div>
                     <div class="information">
                         <!-- Button trigger modal -->
-                        <a th:href="'#' + ${allProjects.id}" type="button" class="btn btn-default btn-md" data-toggle="modal" data-th-target="${allProjects.id}">
+                        <a th:href="'#' + ${project.id}" type="button" class="btn btn-default btn-md" data-toggle="modal" data-th-target="${project.id}">
                             Click for description
                         </a>
                     </div>
@@ -37,7 +37,7 @@
         </div>
 
         <!-- Modal -->
-        <div th:each="allProjects : ${projects}" class="modal fade" th:id="${allProjects.id}"
+        <div th:each="project : ${projects}" class="modal fade" th:id="${project.id}"
              aria-labelledby="projectTitle" tabindex="-1" role="dialog">
 
             <div class="modal-dialog" role="document">
@@ -46,11 +46,11 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="projectTitle"
-                            th:text="${allProjects.title}"></h4>
+                            th:text="${project.title}"></h4>
                     </div>
                     <div class="modal-body">
-                        <p class="description" th:text="${allProjects.description}"></p>
-                        <p class="completed" th:text="${allProjects.completed}"></p>
+                        <p class="description" th:text="${project.description}"></p>
+                        <p class="completed" th:text="${project.completed}"></p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
