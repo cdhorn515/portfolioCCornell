@@ -65,7 +65,7 @@ span{
 
 /*-----------------------ABOUT PAGE--------------*/
 .home-section{
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .container{
@@ -127,10 +127,17 @@ p{
 }
 
 .opacity{
-    background-color: rgba(194,226,215, 0.6);
+    /*background-color: rgba(194,226,215, 0.6);*/
+    height: 80vh;
 }
 
+
+
 /*------------------------PROJECTS PAGE----------*/
+.opacity-project-pg {
+    background-color: rgba(194, 226, 215, 0.6);
+}
+
 .project-container{
     padding-bottom: 20px;
 }
@@ -203,8 +210,20 @@ p{
 }
 
 /*--------------------CONTACT------------------------*/
-.contact-container{
+/*.contact-body{*/
+    /*height: 95vh;*/
+/*}*/
+
+.opacity-contact-pg{
     background-color: rgba(194,226,215, 0.6);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 3;
+}
+
+.contact-container{
+    /*background-color: rgba(194,226,215, 0.6);*/
 }
 
 .contact-pg{
@@ -232,6 +251,9 @@ p{
 label{
     margin-top: 10px;
 }
+
+
+
 /*----------------FOOTER-----------------------------*/
 footer{
     border-top: solid 2px #D25946!important;
@@ -243,7 +265,7 @@ footer{
     vertical-align: super;
 }
 
-.copyright, .credit{
+.copyright{
     font-family: 'Merriweather', serif;
     font-size: 18px;
     font-weight: 300;
@@ -261,12 +283,29 @@ footer{
     text-align: center;
     font-size: 12px;
 }
+
 .credit-contact{
-    color: #A9C4BB;
+    color: #8EA09A;
+    margin-top: 85vh;
 }
+
+.credit-about{
+    margin-top: 10vw;
+}
+
 .admin-link{
     margin-right: 20px;
     font-size: 16px;
+}
+
+.credit{
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    font-size: 12px;
+    font-family: 'Merriweather', serif;
+    color: #33442A;
+
 }
 /*--------------------------ADMIN----------------*/
 .admin-body{
