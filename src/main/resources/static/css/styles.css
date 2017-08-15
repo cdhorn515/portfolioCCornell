@@ -127,10 +127,8 @@ p{
 }
 
 .opacity{
-    /*background-color: rgba(194,226,215, 0.6);*/
     height: 80vh;
 }
-
 
 
 /*------------------------PROJECTS PAGE----------*/
@@ -210,9 +208,6 @@ p{
 }
 
 /*--------------------CONTACT------------------------*/
-/*.contact-body{*/
-    /*height: 95vh;*/
-/*}*/
 
 .opacity-contact-pg{
     background-color: rgba(194,226,215, 0.6);
@@ -220,10 +215,6 @@ p{
     width: 100vw;
     position: fixed;
     z-index: 3;
-}
-
-.contact-container{
-    /*background-color: rgba(194,226,215, 0.6);*/
 }
 
 .contact-pg{
@@ -280,22 +271,17 @@ footer{
 
 .credit, admin-link{
     margin-top: 20px;
-    text-align: center;
     font-size: 12px;
+    float: right;
 }
 
-.credit-contact{
-    color: #8EA09A;
-    margin-top: 85vh;
-}
-
-.credit-about{
-    margin-top: 10vw;
-}
 
 .admin-link{
-    margin-right: 20px;
-    font-size: 16px;
+    float: right;
+}
+
+.navbar-right{
+    margin-right: 20px!important;
 }
 
 .credit{
@@ -333,8 +319,11 @@ footer{
     .name{
         font-size: 36px;
     }
-
 }
+
+
+
+
 
 /*
 fonts:
