@@ -265,6 +265,16 @@ footer{
     color: #A9C4BB;
 }
 
+/*--------------------------ADMIN----------------*/
+.admin-body{
+    background-color: #C2E2D7;
+}
+
+.admin-pg{
+    background-color: rgba(247, 247, 247, 0.9);
+    margin-top: 80px;
+}
+
 @media (max-width: 500px) and (orientation: portrait) {
     .name{
         font-size: 36px;

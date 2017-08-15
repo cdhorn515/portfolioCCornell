@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Admin</title>
-    <!--<span th:include="includes :: css"></span>-->
+    <span th:include="includes :: css"></span>
 </head>
-<body>
+<body class="admin-body">
 
 <div th:include="navbar :: navbar"></div>
+
+<div class="container admin-pg">
 
 <h1>Add new projects to the database:</h1>
 
@@ -55,7 +57,10 @@
            th:value="${_csrf.token}"/>
     <input type="submit" value="Logout"/>
 </form>
+</div>
+<div th:include="navbar :: footer"></div>
 
+<span th:include="includes :: js"></span>
 
 
 </body>

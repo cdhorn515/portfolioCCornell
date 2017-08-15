@@ -19,6 +19,17 @@ public class AdminController {
     @Autowired
     private ProjectRepository projectRepo;
 
+
+        @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login(Model model, HttpServletRequest request) {
+        model.addAttribute("user", new User());
+        try {
+            Object message = request.getSession().getAttribute("error");
+            model.addAttribute("error", message);
+        } catch (Exception ex) {}
+        return "login";
+    }
+
     @RequestMapping("/admin")
     public String index(Model model, Principal principal) {
         try {
@@ -30,16 +41,6 @@ public class AdminController {
         Iterable<Project> allProjects = projectRepo.findAll();
         model.addAttribute("projects", allProjects);
         return "admin";
-    }
-
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String login(Model model, HttpServletRequest request) {
-        model.addAttribute("user", new User());
-        try {
-            Object message = request.getSession().getAttribute("error");
-            model.addAttribute("error", message);
-        } catch (Exception ex) {}
-        return "login";
     }
 
     @RequestMapping(value = "/admin/createProject", method = RequestMethod.POST)

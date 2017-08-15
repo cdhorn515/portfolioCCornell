@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <title>Title</title>
 </head>
+<span th:include="includes :: css"></span>
+
 <body>
+<div th:include="navbar :: navbar"></div>
+<section>
 
+    <h3 th:text="${message}"></h3>
 
-<div class="container">
-    <h1>Admin login:</h1>
-    <form th:action="@{/login}" th:object="${user}" method="post">
-        <input type="hidden"
-               th:name="${_csrf.parameterName}"
-               th:value="${_csrf.token}"/>
-        <input type="text" th:field="*{username}" placeholder="Username"/>
-        <input type="password" th:field="*{password}" placeholder="Password"/>
-        <input type="submit" value="Enter"/>
-    </form>
+    <div class="container">
+        <h1>Admin login:</h1>
+        <form th:action="@{/login}" th:object="${user}" method="post">
+            <input type="hidden"
+                   th:name="${_csrf.parameterName}"
+                   th:value="${_csrf.token}"/>
+            <input type="text" th:field="*{username}" placeholder="Username"/>
+            <input type="password" th:field="*{password}" placeholder="Password"/>
+            <input type="submit" value="Enter"/>
+        </form>
 
-</div>
+    </div>
+    <div class="credit">image by Max Griboedov/shutterstock</div>
+
+</section>
+<div th:include="navbar :: footer"></div>
+
+<span th:include="includes :: js"></span>
 
 </body>
 </html>
