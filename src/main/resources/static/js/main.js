@@ -13,6 +13,7 @@
             aboutMeBioNode.setAttribute("style", "width: 25%");
         }
         counter++;
+        console.log(counter);
     })
 
 

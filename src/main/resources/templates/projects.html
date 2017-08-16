@@ -7,6 +7,31 @@
 </head>
 <body>
 
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div th:include="navbar :: navbar"></div>
 
 <section class="opacity-project-pg">
@@ -26,15 +51,15 @@
                     <div class="technologies" th:text="${project.technologies}"></div>
                     <div class="repo"><a target="_blank" th:href="${project.code}">GitHub repo</a></div>
                     <!--add conditional to check for portfolio project-->
-                    <div class="demo" th:id="${project.id}"><a target="_blank" href="/index" th:if="${project.id} == 5">This link is recursive</a></div>
+                    <div class="demo"><a target="_blank" href="/index" th:if="${project.title} == 'Portfolio Page'">This link is recursive</a></div>
 
-                    <div class="demo" th:id="${project.id}"><a target="_blank" href="#" th:if="${project.id} !=5">Demo-Coming Soon!</a></div>
+                    <div class="demo"><a target="_blank" href="#" th:if="${project.title} !='Portfolio Page'">Demo-Coming Soon!</a></div>
                     <div class="information">
                         <!-- Button trigger modal -->
-                        <a th:href="'#' + ${project.id}" type="button" class="btn btn-default btn-md"
-                           data-toggle="modal" data-th-target="${project.id}">
+                        <button type="button" class="btn btn-default btn-md"
+                           data-toggle="modal" th:attr="data-target='#' + ${project.id}">
                             Click for description
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -67,8 +92,8 @@
 </section>
 
 <div th:include="navbar :: project-footer"></div>
-
 <span th:include="includes :: js"></span>
+
 
 </body>
 </html>
