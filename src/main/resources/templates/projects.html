@@ -25,7 +25,10 @@
                 <div class="thumbnail-txt">
                     <div class="technologies" th:text="${project.technologies}"></div>
                     <div class="repo"><a target="_blank" th:href="${project.code}">GitHub repo</a></div>
-                    <div class="demo"><a target="_blank" href="#">Demo-Coming Soon!</a></div>
+                    <!--add conditional to check for portfolio project-->
+                    <div class="demo" th:id="${project.id}"><a target="_blank" href="/index" th:if="${project.id} == 13">This link is recursive</a></div>
+
+                    <div class="demo" th:id="${project.id}"><a target="_blank" href="#" th:if="${project.id} !=13">Demo-Coming Soon!</a></div>
                     <div class="information">
                         <!-- Button trigger modal -->
                         <a th:href="'#' + ${project.id}" type="button" class="btn btn-default btn-md"
@@ -63,26 +66,7 @@
 
 </section>
 
-<footer class="footer navbar-default">
-    <div class="container-fluid">
-        <div class="footer_icons">
-            <i class="fa fa-copyright super social" aria-hidden="true"></i><span class="copyright">2017 Christina Cornell</span>
-            <a href="https://github.com/cdhorn515"><i class="fa fa-github fa-2x social" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/christinadcornell/"><i class="fa fa-linkedin-square fa-2x social"
-                                                                        aria-hidden="true"></i></a>
-            <a href="https://twitter.com/cdhorn515"><i class="fa fa-twitter fa-2x social"
-                                                       aria-hidden="true"></i></a>
-            <a href="mailto:cdhorn515@gmail.com"><i class="fa fa-envelope fa-2x social" aria-hidden="true"></i></a>
-            <a href="tel:1-864-704-6033"><i class="fa fa-phone fa-2x social" aria-hidden="true"></i></a>
-            <span class="admin-link">
-                <a href="/admin" class="social credit">Admin</a>
-                <p class="social credit">image by Max Griboedov/shutterstock</p>
-                </span>
-        </div>
-    </div>
-</footer>
-
-<!--<div th:include="navbar :: project-footer"></div>-->
+<div th:include="navbar :: project-footer"></div>
 
 <span th:include="includes :: js"></span>
 
