@@ -14,7 +14,7 @@
 
         <img id="myPic" src="/img/profilepic.jpeg" alt=""/>
 
-        <div class="aboutMe">
+        <div class="aboutMe" id="aboutMeContainer">
 
             <!--bootstrap accordian panel-->
             <div class="panel-group" id="accordion">
@@ -59,9 +59,9 @@
 </section>
 
 
-<div th:include="navbar :: footer"></div>
-
+<div th:include="navbar :: main-footer"></div>
 <span th:include="includes :: js"></span>
+<script type="text/javascript" src="/js/main.js"></script>
 
 </body>
 

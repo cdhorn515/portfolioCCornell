@@ -92,7 +92,7 @@ span{
 
 .aboutMe{
     position: relative;
-    width: 45%;
+    /*width: 45%;*/
     max-height: 350px;
     overflow-y: scroll;
     float: left;
@@ -103,6 +103,9 @@ span{
     font-weight: lighter;
     margin-top: 145px;
     background-color: rgba(247, 247, 247, 0.9);
+}
+#aboutMeContainer{
+    width: 25%;
 }
 
 .about-me-title{
