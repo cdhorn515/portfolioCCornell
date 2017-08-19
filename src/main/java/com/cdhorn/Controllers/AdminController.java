@@ -7,6 +7,7 @@ import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -70,6 +71,38 @@ public class AdminController {
     @RequestMapping(value = "/admin/deleteProject", method = RequestMethod.POST)
     public String deleteProject(@RequestParam("id") long id) {
         projectRepo.delete(id);
+        return "redirect:/admin";
+    }
+
+    @RequestMapping(value = "/admin/updateProject/{id}", method = RequestMethod.GET)
+    public String updateProject(@PathVariable("id") long id,
+                                Model model) {
+            Project project = projectRepo.findOne(id);
+            model.addAttribute("project", project);
+            return "edit";
+    }
+
+    @RequestMapping(value = "/admin/updateProject/{id}", method = RequestMethod.POST)
+    public String updateProject(@PathVariable("id") long id,
+                                @RequestParam("title") String title,
+                                @RequestParam("image") String image,
+                                @RequestParam("technologies") String technologies,
+                                @RequestParam("description") String description,
+                                @RequestParam("completed") String completed,
+                                @RequestParam("url") String url,
+                                @RequestParam("code") String code,
+                                @RequestParam("walkthrough") String walkthrough,
+                                Model model) {
+        Project project = projectRepo.findOne(id);
+        project.setTitle(title);
+        project.setImage(image);
+        project.setTechnologies(technologies);
+        project.setDescription(description);
+        project.setCompleted(completed);
+        project.setUrl(url);
+        project.setCode(code);
+        project.setWalkthrough(walkthrough);
+        model.addAttribute(project);
         return "redirect:/admin";
     }
 
