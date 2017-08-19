@@ -302,6 +302,10 @@ footer{
     margin-bottom: 20px;
 }
 
+.updateProject{
+    width: 350px;
+}
+
 .admin-section{
     height: 78vh;
 }

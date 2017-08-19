@@ -13,30 +13,30 @@
 
 <form th:action="'/admin/updateProject/' + ${project.id}" method="post">
     <div>
-    <input type="text" name="title" required="required" th:value="${project.title}"/>
+    <input class="updateProject" type="text" name="title" required="required" th:value="${project.title}"/>
     </div>
     <div>
-    <input type="text" name="image" th:value="${project.image}"/>
+    <input class="updateProject" type="text" name="image" th:value="${project.image}"/>
     </div>
     <div>
-    <input type="text" name="technologies" th:value="${project.technologies}"/>
+    <input class="updateProject" type="text" name="technologies" th:value="${project.technologies}"/>
     </div>
     <div>
-    <input type="text" name="description" th:value="${project.description}"/>
+    <input class="updateProject" type="text" name="description" th:value="${project.description}"/>
     </div>
     <div>
-    <input type="text" name="completed" th:value="${project.completed}"/>
+    <input class="updateProject" type="text" name="completed" th:value="${project.completed}"/>
     </div>
     <div>
-    <input type="text" name="url" th:value="${project.url}"/>
+    <input class="updateProject" type="text" name="url" th:value="${project.url}"/>
     </div>
     <div>
-    <input type="text" name="code" th:value="${project.code}"/>
+    <input class="updateProject" type="text" name="code" th:value="${project.code}"/>
     </div>
     <div>
-    <input type="text" name="walkthrough" placeholder="walkthrough"/>
+    <input class="updateProject" type="text" name="walkthrough" placeholder="walkthrough"/>
     </div>
-   
+
     <input type="hidden"
            th:name="${_csrf.parameterName}"
            th:value="${_csrf.token}"/>

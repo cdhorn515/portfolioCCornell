@@ -51,7 +51,7 @@
                     <div class="technologies" th:text="${project.technologies}"></div>
                     <div class="repo"><a target="_blank" th:href="${project.code}">GitHub repo</a></div>
                     <!--add conditional to check for portfolio project-->
-                    <div class="demo"><a target="_blank" href="/index" th:if="${project.title} == 'Portfolio Page'">This link is recursive</a></div>
+                    <div class="demo"><a th:href="${project.url}" th:if="${project.title} == 'Portfolio Page'">This link is recursive</a></div>
 
                     <div class="demo"><a target="_blank" href="#" th:if="${project.title} !='Portfolio Page'">Demo-Coming Soon!</a></div>
                     <div class="information">
