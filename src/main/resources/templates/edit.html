@@ -12,45 +12,45 @@
 <div class="container admin-pg">
     <h1>Update project information:</h1>
 
-<form th:action="'/admin/updateProject/' + ${project.id}" method="post">
-    <div>
-    <input class="updateProject" type="text" name="title" required="required" th:value="${project.title}"/>
-    </div>
-    <div>
-    <input class="updateProject" type="text" name="image" th:value="${project.image}"/>
-    </div>
-    <div>
-    <input class="updateProject" type="text" name="technologies" th:value="${project.technologies}"/>
-    </div>
-    <div>
-    <input class="updateProject" type="text" name="description" th:value="${project.description}"/>
-    </div>
-    <div>
-    <input class="updateProject" type="text" name="completed" th:value="${project.completed}"/>
-    </div>
-    <div>
-    <input class="updateProject" type="text" name="url" th:value="${project.url}"/>
-    </div>
-    <div>
-    <input class="updateProject" type="text" name="code" th:value="${project.code}"/>
-    </div>
-    <div>
-    <input class="updateProject" type="text" name="walkthrough" placeholder="walkthrough"/>
-    </div>
+    <form th:action="'/admin/updateProject/' + ${project.id}" method="post">
+        <div>
+            <input class="updateProject" type="text" name="title" required="required" th:value="${project.title}"/>
+        </div>
+        <div>
+            <input class="updateProject" type="text" name="image" th:value="${project.image}"/>
+        </div>
+        <div>
+            <input class="updateProject" type="text" name="technologies" th:value="${project.technologies}"/>
+        </div>
+        <div>
+            <input class="updateProject" type="text" name="description" th:value="${project.description}"/>
+        </div>
+        <div>
+            <input class="updateProject" type="text" name="completed" th:value="${project.completed}"/>
+        </div>
+        <div>
+            <input class="updateProject" type="text" name="url" th:value="${project.url}"/>
+        </div>
+        <div>
+            <input class="updateProject" type="text" name="code" th:value="${project.code}"/>
+        </div>
+        <div>
+            <input class="updateProject" type="text" name="walkthrough" th:value="${project.walkthrough}"/>
+        </div>
 
-    <input type="hidden"
-           th:name="${_csrf.parameterName}"
-           th:value="${_csrf.token}"/>
-    <input type="hidden" name="id" th:value="${project.id}"/>
-    <input type="submit" value="Update"/>
-</form>
+        <input type="hidden"
+               th:name="${_csrf.parameterName}"
+               th:value="${_csrf.token}"/>
+        <input type="hidden" name="id" th:value="${project.id}"/>
+        <input type="submit" value="Update"/>
+    </form>
 
-<form th:action="@{/logout}" th:method="post">
-    <input type="hidden"
-           th:name="${_csrf.parameterName}"
-           th:value="${_csrf.token}"/>
-    <input type="submit" value="Logout"/>
-</form>
+    <form th:action="@{/logout}" th:method="post">
+        <input type="hidden"
+               th:name="${_csrf.parameterName}"
+               th:value="${_csrf.token}"/>
+        <input type="submit" value="Logout"/>
+    </form>
 
 </div>
 

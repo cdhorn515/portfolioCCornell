@@ -53,7 +53,7 @@
                     <!--add conditional to check for portfolio project-->
                     <div class="demo"><a th:href="${project.url}" th:if="${project.title} == 'Portfolio Page'">This link is recursive</a></div>
 
-                    <div class="demo"><a target="_blank" href="#" th:if="${project.title} !='Portfolio Page'">Demo-Coming Soon!</a></div>
+                    <div class="demo"><a th:target="_blank" th:href="${project.walkthrough}" th:if="${project.title} !='Portfolio Page'">Demo</a></div>
                     <div class="information">
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-default btn-md"

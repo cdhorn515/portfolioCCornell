@@ -102,6 +102,7 @@ public class AdminController {
         project.setUrl(url);
         project.setCode(code);
         project.setWalkthrough(walkthrough);
+        projectRepo.save(project);
         model.addAttribute(project);
         return "redirect:/admin";
     }
