@@ -15,18 +15,21 @@
 
         <h3 class="contact">Use the links at the bottom of the page or the form below to contact me!</h3>
         <div class="contact-form">
-            <form action="/contact" method="post">
+
+
+            <form action="/contact" method="post" enctype="multipart/form-data">
+
                 <div>
                     <label for="name">Name</label>
                 </div>
                 <div>
-                    <input id="name" type="text" name="name"/>
+                    <input name="name" id="name" type="text"/>
                 </div>
                 <div>
                     <label for="email">Email address</label>
                 </div>
                 <div>
-                    <input type="email" id="email"/>
+                    <input name="email" type="email" id="email"/>
                 </div>
                 <div>
                     <label for="message">Message</label>
@@ -35,9 +38,14 @@
                     <textarea name="message" id="message" cols="80" rows="10"></textarea>
                 </div>
                 <div>
-                    <a href="mailto:cdhorn515@gmail.com" type="button" class="btn btn-xl btn-contact">Send</a>
+                    <input type="hidden"
+                           th:name="${_csrf.parameterName}"
+                           th:value="${_csrf.token}"/>
+
+                    <a href="mailto:cdhorn515@gmail.com?subject=Hi%20Christina,%20I%20like%20your%20portfolio%20site" type="button" class="btn btn-xl btn-contact">Send</a>
                 </div>
             </form>
+
         </div>
     </div>
 
