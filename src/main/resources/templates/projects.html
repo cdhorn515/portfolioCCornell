@@ -40,8 +40,8 @@
 
         <h2 class="projects">Click on the links below to view samples of my web applications:</h2>
 
-        <div class="row">
-            <div th:each="project : ${projects}" class="col-md-4 project-row">
+        <div class="row project-row">
+            <div th:each="project : ${projects}" class="col-md-4 col-sm-12 project-row">
                 <div class="thumbnail-title"><a target="_blank" th:href="${project.url}"
                                                 th:text="${project.title}"></a></div>
                 <a target="_blank" th:href="${project.url}">

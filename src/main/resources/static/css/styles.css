@@ -74,6 +74,7 @@ span{
 
 .home-container{
     padding-top: 50px;
+    padding-bottom: 60px;
 }
 
 .welcome{
@@ -94,6 +95,7 @@ span{
     position: relative;
     max-height: 350px;
     overflow-y: scroll;
+
     float: left;
     padding: 20px;
     padding-bottom: 0;
@@ -104,7 +106,7 @@ span{
     background-color: rgba(247, 247, 247, 0.9);
 }
 #aboutMeContainer{
-    width: 25%;
+    /*width: 25%;*/
 }
 
 .about-me-title{
@@ -148,7 +150,7 @@ p{
     margin-bottom: 20px;
 }
 
-.row{
+.project-row{
     padding: 10px;
     background-color: rgba(247, 247, 247, 0.9);
     margin-bottom: 20px;
@@ -237,6 +239,10 @@ p{
     margin-bottom: 50px;
 }
 
+.form-control{
+    max-width: 50%;
+}
+
 #email, #name{
     width: 300px;
 }
@@ -322,7 +328,53 @@ footer{
 @media (max-width: 500px) and (orientation: portrait) {
     .name{
         font-size: 36px;
+        margin-top: 15px;
     }
+
+    .aboutMe{
+        margin-top: 60px;
+    }
+
+    #myPic{
+        margin: 48px auto 0;
+        float: none;
+        display: block;
+        margin-bottom: 105px;
+        height: 232px;
+        width: 240px;
+    }
+
+    .projects{
+        margin-top: 50px;
+        font-size: 20px;
+    }
+
+    .social, .copyright{
+        font-size: 14px;
+    }
+
+    .credit, admin-link{
+        font-size: 10px;
+    }
+
+    .home-container{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .contact-form{
+        margin-top: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .form-control{
+        max-width: 100%;
+    }
+
+    .contact{
+        font-size: 18px;
+    }
+
 }
 
 /*

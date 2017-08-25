@@ -11,55 +11,121 @@
 
 <section class="home-section">
     <div class="container home-container">
+        <div class="row">
 
-        <img id="myPic" src="/img/profilepic.jpeg" alt=""/>
 
-        <div class="aboutMe" id="aboutMeContainer">
+                <div class="col-md-4 col-xs-12">
 
-            <!--bootstrap accordian panel-->
-            <div class="panel-group" id="accordion">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion"
-                               href="#aboutMe">
-                                Click to read about me...</a>
-                        </h4>
+                <div class="aboutMe hidden-xs" id="aboutMeContainer">
+
+                    <!--bootstrap accordian panel-->
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion"
+                                       href="#aboutMe">
+                                        Click to read about me...</a>
+                                </h4>
+                            </div>
+                            <div id="aboutMe" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <h4 class="about-me-title">Software/Web Developer</h4>
+                                    <p>I'm an Iron Yard Web Development graduate and a french horn player. As a musician
+                                        I use
+                                        critical thinking to determine how to produce a beautiful sound on the horn. I'm
+                                        excited
+                                        to bring my problem solving skills to programming, and am open to
+                                        relocation.</p>
+
+                                    <p>In September 2016 I was accepted into a pilot 12-week program by SC Codes
+                                        which focused on building front-end web applications and also gave me the
+                                        opportunity
+                                        to contribute to Code for Greenville's open source project. I enrolled in The
+                                        Iron Yard's 12-week immersive coding bootcamp in May 2017 where I was able to
+                                        dive
+                                        deeper into front-end as well as learning back-end fundamentals.</p>
+
+                                    <p>My interest in working with data and the server side led me to choose Java
+                                        (Spring
+                                        Boot) as my language focus. I also have experience with SQL, PostgreSQL, Mongo,
+                                        Node.js, along with JavaScript, HTML, and CSS. I enjoy the challenge of
+                                        debugging and
+                                        testing, creating databases, and figuring out how to write code that meets the
+                                        design
+                                        objectives.</p>
+
+                                    <p>Check out my <a href="/projects" class="project-link">projects</a> page for
+                                        samples of my
+                                        work. I look forward to talking with you about becoming a member of your
+                                        team!</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div id="aboutMe" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <h4 class="about-me-title">Software/Web Developer</h4>
-                            <p>I'm an Iron Yard Web Development graduate and a french horn player. As a musician I use
-                                critical thinking to determine how to produce a beautiful sound on the horn. I'm excited
-                                to bring my problem solving skills to programming, and am open to relocation.</p>
+                </div>
 
-                            <p>In September 2016 I was accepted into a pilot 12-week program by SC Codes
-                                which focused on building front-end web applications and also gave me the opportunity
-                                to contribute to Code for Greenville's open source project. I enrolled in The
-                                Iron Yard's 12-week immersive coding bootcamp in May 2017 where I was able to dive
-                                deeper into front-end as well as learning back-end fundamentals.</p>
+                </div>
 
-                            <p>My interest in working with data and the server side led me to choose Java (Spring
-                                Boot) as my language focus. I also have experience with SQL, PostgreSQL, Mongo,
-                                Node.js, along with JavaScript, HTML, and CSS. I enjoy the challenge of debugging and
-                                testing, creating databases, and figuring out how to write code that meets the design
-                                objectives.</p>
+                <!--<div class="col-md-6 col-sm-12"></div>-->
+                <div class="col-md-4 col-md-offset-4 col-xs-12">
+                    <img id="myPic" src="/img/profilepic.jpeg" alt=""/>
+                </div>
 
-                            <p>Check out my <a href="/projects" class="project-link">projects</a> page for samples of my
-                                work. I look forward to talking with you about becoming a member of your
-                                team!</p>
+
+            <div class="aboutMe visible-xs">
+
+                <!--bootstrap accordian panel-->
+                <div class="panel-group" >
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                        </div>
+                        <div id="aboutMe">
+                            <div class="panel-body">
+                                <h4 class="about-me-title">Software/Web Developer</h4>
+                                <p>I'm an Iron Yard Web Development graduate and a french horn player. As a musician
+                                    I use
+                                    critical thinking to determine how to produce a beautiful sound on the horn. I'm
+                                    excited
+                                    to bring my problem solving skills to programming, and am open to
+                                    relocation.</p>
+
+                                <p>In September 2016 I was accepted into a pilot 12-week program by SC Codes
+                                    which focused on building front-end web applications and also gave me the
+                                    opportunity
+                                    to contribute to Code for Greenville's open source project. I enrolled in The
+                                    Iron Yard's 12-week immersive coding bootcamp in May 2017 where I was able to
+                                    dive
+                                    deeper into front-end as well as learning back-end fundamentals.</p>
+
+                                <p>My interest in working with data and the server side led me to choose Java
+                                    (Spring
+                                    Boot) as my language focus. I also have experience with SQL, PostgreSQL, Mongo,
+                                    Node.js, along with JavaScript, HTML, and CSS. I enjoy the challenge of
+                                    debugging and
+                                    testing, creating databases, and figuring out how to write code that meets the
+                                    design
+                                    objectives.</p>
+
+                                <p>Check out my <a href="/projects" class="project-link">projects</a> page for
+                                    samples of my
+                                    work. I look forward to talking with you about becoming a member of your
+                                    team!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+
         </div>
     </div>
+
 
 </section>
 
 
-<div th:include="navbar :: main-footer"></div>
+<div th:include="navbar :: project-footer"></div>
 <span th:include="includes :: js"></span>
 <script type="text/javascript" src="/js/main.js"></script>
 
