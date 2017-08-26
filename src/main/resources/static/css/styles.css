@@ -251,6 +251,10 @@ label{
     margin-top: 10px;
 }
 
+.text-area{
+    margin-bottom: 8px;
+}
+
 /*----------------FOOTER-----------------------------*/
 footer{
     border-top: solid 2px #D25946!important;
@@ -325,10 +329,14 @@ footer{
     margin-top: 70px;
 }
 
-@media (max-width: 600px) and (orientation: portrait) {
+@media (max-width: 420px) and (orientation: portrait) {
+    .aboutBody{
+        margin-top: 50px;
+    }
+
     .name{
-        font-size: 36px;
-        margin-top: 15px;
+        font-size: 30px;
+        margin-top: 16px;
         margin-left: 20px;
     }
 
@@ -340,17 +348,31 @@ footer{
         width: 95%;
     }
 
+    .about-me-title{
+        font-size: 18px;
+    }
+
     .about-mobile{
-        margin: 68px 10px 0;
+        /*margin: 68px 10px 0;*/
+        margin: 29% 2% 0;
+    }
+
+    h2{
+        font-size: 28px;
+        margin-top: 10px;
+    }
+
+    .about-text{
+        font-size: 16px;
     }
 
     #myPic{
-        margin: 48px auto 0;
+        margin: -2% auto 0;
         float: none;
         display: block;
-        margin-bottom: 105px;
-        height: 232px;
-        width: 240px;
+        margin-bottom: 20%;
+        height: 13%;
+        width: 62%;
     }
 
     .projects{
@@ -364,6 +386,10 @@ footer{
 
     .credit, admin-link{
         font-size: 10px;
+    }
+
+    .social{
+        margin-left: 5px;
     }
 
     .home-container{
@@ -381,12 +407,22 @@ footer{
     }
 
     .contact{
-        font-size: 18px;
+        font-size: 16px;
+        margin-top: 15%;
+        margin-bottom: 5%;
     }
 
     .admin-link{
         margin: 0;
-        margin-right: 30px
+        margin-right: 8px
+    }
+
+    .contact-container{
+        margin-bottom: 20px;
+    }
+
+    .spacer{
+        height: 20%;
     }
 
 }

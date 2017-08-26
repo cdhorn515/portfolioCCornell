@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <title>Contact Me</title>
     <span th:include="includes :: css"></span>
 
@@ -23,19 +24,19 @@
                     <label for="name">Name</label>
                 </div>
                 <div>
-                    <input name="name" id="name" type="text"/>
+                    <input class="form-control" name="name" id="name" type="text"/>
                 </div>
                 <div>
                     <label for="email">Email address</label>
                 </div>
                 <div>
-                    <input name="email" type="email" id="email"/>
+                    <input class="form-control" name="email" type="email" id="email"/>
                 </div>
                 <div>
                     <label for="message">Message</label>
                 </div>
                 <div>
-                    <textarea class="form-control text-area" name="message" id="message" cols="80" rows="10"></textarea>
+                    <textarea class="form-control text-area" name="message" id="message" cols="80" rows="6"></textarea>
                 </div>
                 <div>
                     <input type="hidden"
@@ -48,8 +49,8 @@
 
         </div>
     </div>
-
 </section>
+
 
 <div th:include="navbar :: main-footer"></div>
 
