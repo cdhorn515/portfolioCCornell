@@ -105,9 +105,6 @@ span{
     margin-top: 145px;
     background-color: rgba(247, 247, 247, 0.9);
 }
-#aboutMeContainer{
-    /*width: 25%;*/
-}
 
 .about-me-title{
     text-decoration: underline;
@@ -133,7 +130,6 @@ p{
 .opacity{
     height: 80vh;
 }
-
 
 /*------------------------PROJECTS PAGE----------*/
 .opacity-project-pg {
@@ -353,7 +349,6 @@ footer{
     }
 
     .about-mobile{
-        /*margin: 68px 10px 0;*/
         margin: 29% 2% 0;
     }
 
@@ -407,8 +402,8 @@ footer{
     }
 
     .contact{
-        font-size: 16px;
-        margin-top: 15%;
+        font-size: 15px;
+        margin-top: 20%;
         margin-bottom: 5%;
     }
 
@@ -421,14 +416,8 @@ footer{
         margin-bottom: 20px;
     }
 
-    .spacer{
-        height: 20%;
+    textarea.form-control{
+        height: 20vh;
     }
 
 }
-
-/*
-fonts:
-font-family: 'Merriweather', serif;
-font-family: 'Courgette', cursive;
-*/
