@@ -325,14 +325,23 @@ footer{
     margin-top: 70px;
 }
 
-@media (max-width: 500px) and (orientation: portrait) {
+@media (max-width: 600px) and (orientation: portrait) {
     .name{
         font-size: 36px;
         margin-top: 15px;
+        margin-left: 20px;
     }
 
+    .links{
+        background-color: rgba(247, 247, 247, 0.9);
+    }
     .aboutMe{
         margin-top: 60px;
+        width: 95%;
+    }
+
+    .about-mobile{
+        margin: 68px 10px 0;
     }
 
     #myPic{
@@ -373,6 +382,11 @@ footer{
 
     .contact{
         font-size: 18px;
+    }
+
+    .admin-link{
+        margin: 0;
+        margin-right: 30px
     }
 
 }
