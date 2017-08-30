@@ -123,7 +123,7 @@ p{
     font-weight: 500;
 }
 
-.project-link{
+.project-link, .contact-link{
     color: #D25946;
 }
 
