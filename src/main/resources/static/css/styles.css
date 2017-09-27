@@ -325,6 +325,10 @@ footer{
     margin-top: 70px;
 }
 
+#project-break {
+    margin-bottom: 20px;
+}
+
 @media (max-width: 420px) and (orientation: portrait) {
     .aboutBody{
         margin-top: 50px;

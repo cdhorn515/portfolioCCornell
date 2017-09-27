@@ -18,18 +18,58 @@
             <input type="hidden"
                    th:name="${_csrf.parameterName}"
                    th:value="${_csrf.token}"/>
-            <input type="text" name="title" required="required" placeholder="title"/>
-            <input type="text" name="image" placeholder="image"/>
-            <input type="text" name="technologies" placeholder="technologies"/>
-            <input type="text" name="description" placeholder="description"/>
-            <input type="text" name="completed" placeholder="completed"/>
-            <input type="text" name="url" placeholder="url"/>
-            <input type="text" name="code" placeholder="code"/>
-            <input type="text" name="walkthrough" placeholder="walkthrough"/>
-            <input type="text" name="viewable"/>
-            <input type="submit" value="Add"/>
+
+            <input class="form-control" type="text" name="title" required="required" placeholder="title"/>
+            <div>
+                <input class="form-control" type="text" name="image" placeholder="image"/>
+                <div>
+                </div>
+                <input class="form-control" type="text" name="technologies" placeholder="technologies"/>
+                <div>
+                </div>
+                <input class="form-control" type="text" name="description" placeholder="description"/>
+                <div>
+                </div>
+                <input class="form-control" type="text" name="completed" placeholder="completed"/>
+                <div>
+                </div>
+                <input class="form-control" type="text" name="url" placeholder="url"/>
+                <div>
+                </div>
+                <input class="form-control" type="text" name="code" placeholder="code"/>
+                <div>
+                </div>
+                <input class="form-control" type="text" name="walkthrough" placeholder="walkthrough"/>
+            </div>
+            <div>Do you want this project to be viewable on the website?</div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="form-group">
+                        <div class="radio-inline">
+                            <label class="col-sm-2 control-label">
+                                <input type="radio" name="viewable" id="true"
+
+                                       value="True"/>
+                                Yes
+                            </label>
+                        </div>
+                        <div class="radio-inline">
+                            <label class="col-sm-2 control-label">
+                                <input type="radio" name="viewable" id="false"
+
+                                       value="False"/>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Add"/>
+
+            </div>
         </form>
     </div>
+
+    <h4>Current projects in database:</h4>
     <ul>
         <li th:each="project : ${projects}">
             <form action="/admin/deleteProject" method="post">
@@ -48,44 +88,27 @@
                 <span th:text="${project.code}"></span>
                 :
                 <span th:text="${project.walkthrough}"></span>
-
-                <h5>Is this project viewable on the website?</h5>
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <div class="radio-inline">
-                            <label class="col-sm-2 control-label">
-                                <input type="radio" name="viewable" id="true"
-                                       th:checked="${project.viewable == True}"
-                                       th:value="${project.viewable}"/>
-                                Yes
-                            </label>
-                        </div>
-                        <div class="radio-inline">
-                            <label class="col-sm-2 control-label">
-                                <input type="radio" name="viewable" id="false"
-                                       th:checked="${project.viewable == False}"
-                                       th:value="${project.viewable}"/>
-                                No
-                            </label>
-                        </div>
-                    </div>
+                <div>
+                    <span><h5>Is this project viewable on the website?&nbsp;</h5></span><span><h5
+                        th:if="${project.viewable == True}">Yes</h5></span>
+                    <span><h5 th:if="${project.viewable == False}">No</h5></span>
                 </div>
-
-
-                <input type="hidden"
-                       th:name="${_csrf.parameterName}"
-                       th:value="${_csrf.token}"/>
-                <input type="hidden" name="id" th:value="${project.id}"/>
-                <input type="submit" value="Delete"/>
-
+                <div class="col-sm-3 col-xs-12">
+                    <input type="hidden"
+                           th:name="${_csrf.parameterName}"
+                           th:value="${_csrf.token}"/>
+                    <input type="hidden" name="id" th:value="${project.id}"/>
+                    <input type="submit" value="Delete"/>
+                </div>
             </form>
+            <div class="col-sm-3 col-xs-12">
+                <form th:action="'/admin/updateProject/' + ${project.id}" method="get">
+                    <input type="hidden" name="id" th:value="${project.id}"/>
+                    <input type="submit" value="Update"/>
 
-            <form th:action="'/admin/updateProject/' + ${project.id}" method="get">
-                <input type="hidden" name="id" th:value="${project.id}"/>
-                <input type="submit" value="Update"/>
-
-            </form>
-
+                </form>
+            </div>
+            <div class="row" id="project-break"></div>
         </li>
     </ul>
 
