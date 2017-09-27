@@ -39,7 +39,28 @@
             <input class="updateProject" type="text" name="walkthrough" th:value="${project.walkthrough}"/>
         </div>
         <div>
-            
+            <h5>Is this project viewable?</h5>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="radio-inline">
+                        <label class="col-sm-2 control-label">
+                            <input type="radio" name="viewable" id="true"
+                                   th:checked="${project.viewable == True}"
+                                   th:value="${project.viewable}"/>
+                            Yes
+                        </label>
+                    </div>
+                    <div class="radio-inline">
+                        <label class="col-sm-2 control-label">
+                            <input type="radio" name="viewable" id="false"
+                                   th:checked="${project.viewable == False}"
+                                   th:value="${project.viewable}"/>
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <input type="hidden"

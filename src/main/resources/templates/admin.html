@@ -26,7 +26,7 @@
             <input type="text" name="url" placeholder="url"/>
             <input type="text" name="code" placeholder="code"/>
             <input type="text" name="walkthrough" placeholder="walkthrough"/>
-            <input type="text" name="viewable">
+            <input type="text" name="viewable"/>
             <input type="submit" value="Add"/>
         </form>
     </div>
@@ -48,6 +48,29 @@
                 <span th:text="${project.code}"></span>
                 :
                 <span th:text="${project.walkthrough}"></span>
+
+                <h5>Is this project viewable on the website?</h5>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <div class="radio-inline">
+                            <label class="col-sm-2 control-label">
+                                <input type="radio" name="viewable" id="true"
+                                       th:checked="${project.viewable == True}"
+                                       th:value="${project.viewable}"/>
+                                Yes
+                            </label>
+                        </div>
+                        <div class="radio-inline">
+                            <label class="col-sm-2 control-label">
+                                <input type="radio" name="viewable" id="false"
+                                       th:checked="${project.viewable == False}"
+                                       th:value="${project.viewable}"/>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
 
                 <input type="hidden"
                        th:name="${_csrf.parameterName}"
