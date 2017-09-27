@@ -52,7 +52,8 @@ public class AdminController {
                                 @RequestParam("completed") String completed,
                                 @RequestParam("url") String url,
                                 @RequestParam("code") String code,
-                                @RequestParam("walkthrough") String walkthrough) {
+                                @RequestParam("walkthrough") String walkthrough,
+                                @RequestParam("viewable") String viewable) {
 
         Project newProject = new Project();
         newProject.setTitle(title);
@@ -63,6 +64,11 @@ public class AdminController {
         newProject.setUrl(url);
         newProject.setCode(code);
         newProject.setWalkthrough(walkthrough);
+        if (viewable.equals("True")) {
+            newProject.setViewable(true);
+        } else {
+            newProject.setViewable(false);
+        }
         projectRepo.save(newProject);
 
         return "redirect:/admin";
@@ -92,6 +98,7 @@ public class AdminController {
                                 @RequestParam("url") String url,
                                 @RequestParam("code") String code,
                                 @RequestParam("walkthrough") String walkthrough,
+                                @RequestParam("viewable") String viewable,
                                 Model model) {
         Project project = projectRepo.findOne(id);
         project.setTitle(title);
@@ -102,6 +109,12 @@ public class AdminController {
         project.setUrl(url);
         project.setCode(code);
         project.setWalkthrough(walkthrough);
+        if (viewable.equals("True")) {
+            project.setViewable(true);
+        } else {
+            project.setViewable(false);
+        }
+
         projectRepo.save(project);
         model.addAttribute(project);
         return "redirect:/admin";
