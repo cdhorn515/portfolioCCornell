@@ -15,7 +15,7 @@ public class Projects {
 
     @RequestMapping("/projects")
     public String projects(Model model) {
-        Iterable<Project> allProjects = projectRepo.findAll();
+        Iterable<Project> allProjects = projectRepo.findAllByViewableIsTrue();
         model.addAttribute("projects", allProjects);
         return "projects";
     }

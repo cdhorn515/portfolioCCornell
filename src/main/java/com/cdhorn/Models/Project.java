@@ -19,6 +19,7 @@ public class Project {
     private String url;
     private String code;
     private String walkthrough;
+    private Boolean viewable;
 
     public long getId() {
         return id;
@@ -90,5 +91,13 @@ public class Project {
 
     public void setWalkthrough(String walkthrough) {
         this.walkthrough = walkthrough;
+    }
+
+    public Boolean getViewable() {
+        return viewable;
+    }
+
+    public void setViewable(Boolean viewable) {
+        this.viewable = viewable;
     }
 }
