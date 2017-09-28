@@ -52,7 +52,7 @@
                     <div class="repo"><a target="_blank" th:href="${project.code}">GitHub repo</a></div>
                     <!--add conditional to check for portfolio project-->
                     <div class="demo"><a th:href="${project.url}" th:if="${project.title} == 'Portfolio Page'">This link is recursive</a></div>
-
+                    <div class="demo"><a th:if="${project.walkthrough == null}" href="#">Coming Soon!</a></div>
                     <div class="demo"><a th:target="_blank" th:href="${project.walkthrough}" th:if="${project.title} !='Portfolio Page'">Demo</a></div>
                     <div class="information">
                         <!-- Button trigger modal -->
