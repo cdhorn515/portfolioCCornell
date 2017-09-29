@@ -418,7 +418,8 @@ footer{
     }
 
     .contact-container{
-        margin-bottom: 20px;
+        height: 100vh;
+        margin-bottom: 250px;
     }
 
     textarea.form-control{
