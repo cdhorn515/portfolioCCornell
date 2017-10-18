@@ -10,7 +10,7 @@
 
         aboutMeBioNode.setAttribute("style", "width: 100%");
         } else {
-            aboutMeBioNode.setAttribute("style", "width: 80%");
+            aboutMeBioNode.setAttribute("style", "width: 70%");
         }
         counter++;
         console.log(counter);
