@@ -56,7 +56,7 @@
                             class="demo"><a th:if="${project.title} == 'Running Routes'" href="#">Demo Coming
                         Soon!</a></div>
 
-                    <div class="demo"><a th:target="_blank" th:href="${project.walkthrough}" th:if="${project.title} !='Running Routes'">Demo</a></div>
+                    <div class="demo"><a th:if="${project.title !='Running Routes' and project.title !='Portfolio Page'}" th:target="_blank" th:href="${project.walkthrough}">Demo</a></div>
 
                     <div class="information">
                         <!-- Button trigger modal -->
