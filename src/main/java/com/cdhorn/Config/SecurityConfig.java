@@ -7,8 +7,11 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+
+import java.util.Collection;
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
@@ -35,6 +38,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                     .antMatchers("/contact").permitAll()
                     .antMatchers("/projects").permitAll()
                     .antMatchers("/admin/**").hasRole("ADMIN")
+                    .antMatchers("/admin/**").hasRole("USER")
                 .and()
                 .formLogin()
                     .loginPage("/login")
@@ -48,8 +52,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     }
 
     private AuthenticationSuccessHandler loginSuccessHandler() {
-        return (request, response, authentication) -> response.sendRedirect("/admin");
+        return (request, response, authentication) -> {
+            Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
+            for (GrantedAuthority grantedAuthority : authorities) {
+                if (grantedAuthority.getAuthority().equals("ROLE_USER")) {
+                    response.sendRedirect("/admin");
+                    return;
+                } else if (grantedAuthority.getAuthority().equals("ROLE_ADMIN")) {
+                    response.sendRedirect("/admin");
+                    return;
+                }
+            }
+        };
     }
+
+//    private AuthenticationSuccessHandler loginSuccessHandler() {
+//        return (request, response, authentication) -> response.sendRedirect("/admin");
+//    }
 
     private AuthenticationFailureHandler loginFailureHandler() {
         return (request, response, exception) -> {

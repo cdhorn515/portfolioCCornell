@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -63,7 +64,9 @@
                         </div>
                     </div>
                 </div>
-                <input type="submit" value="Add"/>
+                <input type="submit" value="Add" sec:authorize="hasRole('ROLE_ADMIN')"/>
+                <input type="button" value="Add" disabled="true" sec:authorize="hasRole('ROLE_USER')"/>
+
             </div>
         </form>
     </div>
@@ -97,7 +100,8 @@
                            th:name="${_csrf.parameterName}"
                            th:value="${_csrf.token}"/>
                     <input type="hidden" name="id" th:value="${project.id}"/>
-                    <input type="submit" value="Delete"/>
+                    <input type="submit" value="Delete" sec:authorize="hasRole('ROLE_ADMIN')"/>
+                    <input type="button" value="Delete" disabled="true" sec:authorize="hasRole('ROLE_USER')"/>
                 </div>
             </form>
             <div class="col-sm-3 col-xs-12">

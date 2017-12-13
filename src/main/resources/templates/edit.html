@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -66,17 +67,25 @@
                th:name="${_csrf.parameterName}"
                th:value="${_csrf.token}"/>
         <input type="hidden" name="id" th:value="${project.id}"/>
-        <input type="submit" value="Update"/>
+        <input type="submit" value="Update" sec:authorize="hasRole('ROLE_ADMIN')"/>
+        <input type="button" value="Update" disabled="true" sec:authorize="hasRole('ROLE_USER')"/>
         </div>
 
     </form>
 
-    <form th:action="@{/logout}" th:method="post">
-        <input type="hidden"
-               th:name="${_csrf.parameterName}"
-               th:value="${_csrf.token}"/>
-        <input type="submit" value="Logout"/>
-    </form>
+    <div class="back-button">
+        <form action="/admin" method="get">
+            <input class="btn btn-default" type="submit" value="Back"/>
+        </form>
+    </div>
+
+
+    <!--<form th:action="@{/logout}" th:method="post">-->
+        <!--<input type="hidden"-->
+               <!--th:name="${_csrf.parameterName}"-->
+               <!--th:value="${_csrf.token}"/>-->
+        <!--<input type="submit" value="Logout"/>-->
+    <!--</form>-->
 
 </div>
 
