@@ -329,6 +329,10 @@ footer{
     margin-bottom: 20px;
 }
 
+.demo-notice {
+    color: #880000;
+}
+
 @media (max-width: 420px) and (orientation: portrait) {
     .aboutBody{
         margin-top: 50px;

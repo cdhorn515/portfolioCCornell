@@ -14,6 +14,10 @@
 <div class="container admin-pg">
     <h1>Update project information:</h1>
 
+    <div class="demo-version" sec:authorize="hasRole('ROLE_USER')">
+        <h5 class="demo-notice">You are viewing this page in demo mode. Update feature has been disabled</h5>
+    </div>
+
     <form th:action="'/admin/updateProject/' + ${project.id}" method="post">
         <div>
             <input class="updateProject" type="text" name="title" required="required" th:value="${project.title}"/>

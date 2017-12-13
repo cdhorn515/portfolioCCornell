@@ -14,6 +14,9 @@
 <div class="container admin-pg">
 
     <h1>Add new projects to the database:</h1>
+    <div class="demo-version" sec:authorize="hasRole('ROLE_USER')">
+        <h5 class="demo-notice">You are viewing this page in demo mode. Delete and Add features have been disabled</h5>
+    </div>
     <div class="admin-form">
         <form action="/admin/createProject" method="post">
             <input type="hidden"
