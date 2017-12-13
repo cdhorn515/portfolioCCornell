@@ -37,8 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                     .antMatchers("/").permitAll()
                     .antMatchers("/contact").permitAll()
                     .antMatchers("/projects").permitAll()
-                    .antMatchers("/admin/**").hasRole("ADMIN")
-                    .antMatchers("/admin/**").hasRole("USER")
+                    .antMatchers("/admin/**").hasAnyRole("ADMIN", "USER")
                 .and()
                 .formLogin()
                     .loginPage("/login")
@@ -52,23 +51,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     }
 
     private AuthenticationSuccessHandler loginSuccessHandler() {
-        return (request, response, authentication) -> {
-            Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
-            for (GrantedAuthority grantedAuthority : authorities) {
-                if (grantedAuthority.getAuthority().equals("ROLE_USER")) {
-                    response.sendRedirect("/admin");
-                    return;
-                } else if (grantedAuthority.getAuthority().equals("ROLE_ADMIN")) {
-                    response.sendRedirect("/admin");
-                    return;
-                }
-            }
-        };
+        return (request, response, authentication) -> response.sendRedirect("/admin");
     }
-
-//    private AuthenticationSuccessHandler loginSuccessHandler() {
-//        return (request, response, authentication) -> response.sendRedirect("/admin");
-//    }
 
     private AuthenticationFailureHandler loginFailureHandler() {
         return (request, response, exception) -> {
