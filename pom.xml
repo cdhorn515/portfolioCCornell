@@ -5,7 +5,7 @@
 
 	<groupId>com.cdhorn</groupId>
 	<artifactId>portfolio</artifactId>
-	<version>1.0.40-RELEASE</version>
+	<version>1.0.41-RELEASE</version>
 	<packaging>jar</packaging>
 
 	<name>portfolio</name>
@@ -64,6 +64,7 @@
             <groupId>org.thymeleaf.extras</groupId>
             <artifactId>thymeleaf-extras-springsecurity4</artifactId>
         </dependency>
+
 
     </dependencies>
 
