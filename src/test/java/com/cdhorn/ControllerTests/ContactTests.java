@@ -1,6 +1,7 @@
 package com.cdhorn.ControllerTests;
 
-import com.cdhorn.Controllers.Home;
+
+import com.cdhorn.Controllers.Contact;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,13 +14,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-public class HomeTests {
+public class ContactTests {
 
     private MockMvc mockMvc;
 
     @Before
     public void setup() {
-        mockMvc = MockMvcBuilders.standaloneSetup(new Home())
+        mockMvc = MockMvcBuilders.standaloneSetup(new Contact())
                 .setViewResolvers(new StandAloneMvcTestViewResolver())
                 .build();
     }
@@ -27,6 +28,6 @@ public class HomeTests {
     @Test
     public void testHomePageStatus() throws Exception {
 
-        this.mockMvc.perform(get("/")).andExpect(status().isOk()).andExpect(view().name("index"));
+        this.mockMvc.perform(get("/contact")).andExpect(status().isOk()).andExpect(view().name("contact"));
     }
 }
