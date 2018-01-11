@@ -28,6 +28,6 @@ public class ContactTests {
     @Test
     public void testHomePageStatus() throws Exception {
 
-        this.mockMvc.perform(get("/contact")).andExpect(status().isOk()).andExpect(view().name("contact"));
+        mockMvc.perform(get("/contact")).andExpect(status().isOk()).andExpect(view().name("contact"));
     }
 }

@@ -27,6 +27,6 @@ public class HomeTests {
     @Test
     public void testHomePageStatus() throws Exception {
 
-        this.mockMvc.perform(get("/")).andExpect(status().isOk()).andExpect(view().name("index"));
+        mockMvc.perform(get("/")).andExpect(status().isOk()).andExpect(view().name("index"));
     }
 }
