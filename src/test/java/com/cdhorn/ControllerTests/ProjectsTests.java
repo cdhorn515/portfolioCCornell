@@ -1,9 +1,9 @@
 package com.cdhorn.ControllerTests;
 
 
-import com.cdhorn.Controllers.Projects;
 import com.cdhorn.Interfaces.ProjectRepository;
 import com.cdhorn.PortfolioApplication;
+import com.cdhorn.PortfolioApplicationTests;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,6 +13,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -24,9 +25,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = PortfolioApplication.class)
 @ActiveProfiles(profiles = "test")
-public class ProjectsTests {
+public class ProjectsTests extends PortfolioApplicationTests {
 
     private MockMvc mockMvc;
+
+    @Autowired
+    WebApplicationContext webApplicationContext;
 
     @Autowired
     ProjectRepository projectRepoTest;
@@ -36,8 +40,7 @@ public class ProjectsTests {
 
     @Before
     public void setup() {
-        mockMvc = MockMvcBuilders.standaloneSetup(new Projects())
-                .addPlaceholderValue("project", "1")
+        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext)
                 .build();
     }
 
@@ -57,6 +60,6 @@ public class ProjectsTests {
 
         mockMvc.perform(get("/projects"))
                 .andExpect(status().isOk())
-                .andExpect(view().name("project"));
+                .andExpect(view().name("projects"));
     }
 }
