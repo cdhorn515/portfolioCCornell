@@ -13,7 +13,7 @@ I build a multi-page portfolio to introduce myself and showcase projects I've bu
 
 I created an admin section which uses authorization and authentication to ensure only authorized users can make updates to the project information stored in the database and rendered to the Projects page. 
 
-This project is deployed using AWS Elastic Beanstalk and can be viewed here: [www.christinacornell.com][www.christinacornell.com]. Use the following to log in to the admin section: 
+This project is deployed using AWS Elastic Beanstalk and can be viewed here: [www.christinacornell.com](http://www.christinacornell.com). Use the following to log in to the admin section: 
 
 `username: adminDemo password: demo123`
 
@@ -54,7 +54,9 @@ CREATE TABLE user_data (
 );
 ```
 
-Clone this repository and run `mvn clean package` from your project directory (this will build the project and create a jar file in the target directory).
+* Clone this repository and in your terminal type `git clone` and paste the url that you copied. 
+* Open the application.properties file and replace portfoliocdc in the `spring.datasource.url` with your database name, and update the username and password if applicable to your database. 
+* Run `mvn clean package` from your project directory (this will build the project and create a jar file in the target directory).
 
 
 To run the project type: `java -jar target/portfolio-0.0.1-SNAPSHOT.jar`, then open a browser window and go to `localhost:8080`.
