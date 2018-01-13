@@ -13,7 +13,7 @@ I built a multi-page portfolio to introduce myself and showcase projects I've bu
 
 I created an admin section which uses authorization and authentication to ensure only authorized users can make updates to the project information stored in the database and rendered to the Projects page. 
 
-This project is deployed using AWS Elastic Beanstalk and can be viewed here: [www.christinacornell.com](http://www.christinacornell.com). Use the following to log in to the admin section: 
+This project is deployed using AWS Elastic Beanstalk and can be viewed [here](http://ccornell.us-east-2.elasticbeanstalk.com). Use the following if you want to log in and view the admin section: 
 
 `username: adminDemo password: demo123`
 
