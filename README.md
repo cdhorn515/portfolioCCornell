@@ -1,6 +1,6 @@
 # Portfolio
 
-I build a multi-page portfolio to introduce myself and showcase projects I've built.
+I built a multi-page portfolio to introduce myself and showcase projects I've built.
 
 ## Built with
 
