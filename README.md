@@ -50,13 +50,11 @@ CREATE TABLE user_data (
     id SERIAL INTEGER NOT NULL PRIMARY KEY, 
     username VARCHAR(50),
     password VARCHAR(50),
-    role_id (foreign key to role (id)
+    role_id (foreign key to role (id))
 );
 ```
 
-Clone this repository and run the following from your project directory:
-
-`mvn clean package` (this will build the project and create a jar file in the target directory)
+Clone this repository and run `mvn clean package` from your project directory (this will build the project and create a jar file in the target directory).
 
 
 To run the project type: `java -jar target/portfolio-0.0.1-SNAPSHOT.jar`, then open a browser window and go to `localhost:8080`.
