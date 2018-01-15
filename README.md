@@ -1,6 +1,6 @@
 # Portfolio
 
-I built a multi-page portfolio to introduce myself and showcase projects I've built.
+I built a multi-page portfolio to introduce myself :grinning: :wave: and showcase projects I've built.
 
 ## Built with
 
@@ -19,13 +19,15 @@ This project is deployed using AWS Elastic Beanstalk and can be viewed [here](ht
 
 To run this project locally:
 
-Make sure you have `Java8` and `JDK 1.8` installed (this project uses 1.8.131, but you can use the latest version)
+Make sure you have **Java8** and **JDK 1.8** installed (this project was built using **1.8.131**)
 
-You will need to create a Postgres database with the following schema:
+You will need to create a Postgres database 
 
 `createdb [dbname]`
 
 `psql [dbname]`
+
+with the following schema:
 
 ```
 CREATE TABLE projects (
