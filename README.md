@@ -31,7 +31,7 @@ with the following schema:
 
 ```
 CREATE TABLE projects (
-    id SERIAL INTEGER NOT NULL PRIMARY KEY,
+    id SERIAL INTEGER PRIMARY KEY,
     title VARCHAR(255),
     image VARCHAR(255),
     technologies VARCHAR(255),
@@ -44,15 +44,15 @@ CREATE TABLE projects (
 );
 
 CREATE TABLE role (
-    id SERIAL INTEGER NOT NULL PRIMARY KEY, 
+    id SERIAL INTEGER PRIMARY KEY, 
     name VARCHAR(20)
 );
 
 CREATE TABLE user_data (
-    id SERIAL INTEGER NOT NULL PRIMARY KEY, 
+    id SERIAL INTEGER PRIMARY KEY, 
     username VARCHAR(50),
     password VARCHAR(50),
-    role_id (foreign key to role (id))
+    role_id INTEGER REFERENCES role(id)
 );
 ```
 
