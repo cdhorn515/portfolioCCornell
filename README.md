@@ -7,6 +7,7 @@ I built a multi-page portfolio to introduce myself :grinning: :wave: and showcas
 * Maven
 * Java 8 (JDK 1.8.131)
 * Spring Boot
+* JavaScript
 * HTML5
 * CSS3
 * Thymeleaf 
