@@ -61,6 +61,6 @@ CREATE TABLE user_data (
 * Run `mvn clean package` from your project directory (this will build the project and create a jar file in the target directory).
 
 
-To run the project type: `java -jar target/portfolio-0.0.1-SNAPSHOT.jar`, then open a browser window and go to `localhost:8080`.
+To run the project type: `java -jar target/portfolio-1.0.41-RELEASE.jar`, then open a browser window and go to `localhost:8080`.
 
 
