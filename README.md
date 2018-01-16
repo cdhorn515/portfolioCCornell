@@ -4,7 +4,9 @@ I built a multi-page portfolio to introduce myself :grinning: :wave: and showcas
 
 ## Built with
 
-* Java 8 
+* Maven
+* Java 8 (JDK 1.8.131)
+* Spring Boot
 * HTML5
 * CSS3
 * Thymeleaf 
@@ -18,8 +20,6 @@ This project is deployed using AWS Elastic Beanstalk and can be viewed [here](ht
 `username: adminDemo password: demo123`
 
 To run this project locally:
-
-Make sure you have **Java8** and **JDK 1.8** installed (this project was built using **1.8.131**)
 
 You will need to create a Postgres database 
 
